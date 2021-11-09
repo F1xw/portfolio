@@ -1,0 +1,49 @@
+.landingBubble {
+    position: relative;
+    margin-left: 100px;
+    animation: float 10s ease-in-out infinite alternate;
+    display: flex;
+    flex-direction: column;
+}
+
+.landingBubble img {
+    width: 715px;
+    z-index: -1;
+}
+
+.landingBubble__text {
+    position: absolute;
+    z-index: 10;
+    cursor: default !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.landingBubble__text h1 {
+    font-size: 45px;
+}
+
+.landingBubble__text h1 span {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+
+.landingBubble__text h1 span l {
+    transition: background-color .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--col-secondary);
+    transform: rotate(0deg);
+}
+
+.landingBubble__text h1 span l:hover {
+    background-color: var(--col-primary);
+    transition: background-color .1s ease-in-out;
+}

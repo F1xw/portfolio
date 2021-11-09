@@ -1,0 +1,8 @@
+.content {
+    width: 100%;
+    height: calc(100% - 80px);
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+}
