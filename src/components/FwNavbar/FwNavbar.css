@@ -1,0 +1,43 @@
+.FwNavbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--col-content-bg);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.FwNavbar__logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    left:15px;
+    border-radius: 50%;
+    transition: border-radius .2s ease-in-out, background-color .3s ease-in-out, transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: transparent;
+}
+
+
+.FwNavbar__logo:hover {
+    background-color: var(--col-bg);
+    border-radius: 25%;
+}
+
+.FwNavbar__logo:active {
+    transform: rotate(45deg);
+}
+
+.FwNavbar__links > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    float: left;
+}
