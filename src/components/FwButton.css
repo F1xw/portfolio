@@ -1,0 +1,28 @@
+.FwButton {
+    position: relative;
+    border: none;
+    background-color: #35328C;
+    color: #fff;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    min-width: 150px;
+    min-height: 50px;
+    box-shadow: 5px 5px 0px 0px rgba(242,73,105,1);
+    transition: box-shadow .2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .2s ease-in-out;
+    transform-origin: top left;
+    cursor: pointer;
+}
+
+.FwButton:hover, .FwButton:focus-visible {
+    box-shadow: 10px 10px 0px 0px rgba(242,73,105,1);
+}
+
+.FwButton:active {
+    box-shadow: 4px 4px 0px 0px #35328C;
+    background-color: rgba(242,73,105,1);
+}
