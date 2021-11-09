@@ -19,7 +19,7 @@ class FwButton extends React.Component {
 
 
   render() {
-    return <button onClick={this.processClick} className="FwButton">{this.props.text}</button>;
+    return <button onClick={this.processClick} className="FwButton">{this.props.children}</button>;
   }
 }
 
