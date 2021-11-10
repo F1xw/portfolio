@@ -7,7 +7,7 @@ import "./FwAboutMe.css";
 class FwAboutMe extends React.Component {
 
     scrollTo() {
-        Scroll.animateScroll.scrollTo(window.innerHeight*2+80)
+        Scroll.animateScroll.scrollTo(window.innerHeight*2)
     }
 
     render() {
