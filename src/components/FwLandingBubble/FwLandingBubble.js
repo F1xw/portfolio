@@ -7,17 +7,17 @@ import "./FwLandingBubble.css";
 class FwLandingBubble extends React.Component {
 
     scrollTo() {
-        Scroll.animateScroll.scrollTo(window.innerHeight+80)
+        Scroll.animateScroll.scrollTo(window.innerHeight)
     }
 
     render() {
         return <div className="landingBubble">
                 <img src={landingBubbleVector} alt="" />
                 <div className="landingBubble__text">
-                    <h1>Hello, my name is <br /><span>
+                    <h1>Hi! My name is <br /><span>
                         <l>F</l><l>l</l><l>o</l><l>r</l><l>i</l><l>a</l><l>n</l>
                     </span></h1>
-                    <FwButton onClick={this.scrollTo}>Next</FwButton>
+                    <FwButton onClick={this.scrollTo}>About Me</FwButton>
                 </div>
             </div>;
     }
