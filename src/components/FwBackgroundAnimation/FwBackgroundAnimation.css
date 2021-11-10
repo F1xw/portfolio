@@ -23,21 +23,24 @@
     list-style: none;
     width: 25px;
     height: 25px;
-    background: rgba(255, 255, 255, 0.2);
     animation: bg-animate-01 20s linear infinite;
     bottom: -150px;
+    filter: opacity(.4);
   }
   
   .bg-animation-box li.circle-box {
-    border-radius: 50%;
+    background-image: url("../../assets/rocket.png");
+    background-size: contain;
   }
   
   .bg-animation-box li.corners-box-20 {
-    border-radius: 20%;
+    background-image: url("../../assets/star.png");
+    background-size: contain;
   }
   
   .bg-animation-box li.corners-box-35 {
-    border-radius: 35%;
+    background-image: url("../../assets/star.png");
+    background-size: cover;
   }
   
   .bg-animation-box li:nth-child(1) {
