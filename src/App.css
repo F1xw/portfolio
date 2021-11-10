@@ -28,3 +28,13 @@
 		transform: translatey(0px);
 	}
 }
+
+a:link, a:visited {
+  color: var(--col-primary);
+  text-decoration: none;
+}
+
+a:link:hover, a:visited:hover {
+  color: var(--col-secondary);
+  text-decoration: underline;
+}

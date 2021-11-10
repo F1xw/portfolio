@@ -7,7 +7,6 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    background: var(--col-bg);
 }
 
 .content:first-of-type {
