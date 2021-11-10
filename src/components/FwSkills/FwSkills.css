@@ -41,8 +41,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     position: absolute;
     right: 300px;
     animation: float 17s ease-in-out infinite;
@@ -64,6 +64,7 @@
     cursor: default;
     transform: scale(120%);
 }
+
 
 @keyframes colorShift {
     0%, 100% {
