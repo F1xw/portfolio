@@ -1,4 +1,5 @@
-![build](https://github.com/F1xw/portfolio/actions/workflows/node.js.yml/badge.svg)
+![test](https://github.com/F1xw/portfolio/actions/workflows/node.js.yml/badge.svg)
+![pages](https://github.com/F1xw/portfolio/actions/workflows/pages.yml/badge.svg)
 
 # Getting Started with Create React App
 
