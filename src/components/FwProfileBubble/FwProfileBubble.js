@@ -7,7 +7,7 @@ class FwProfileBubble extends React.Component {
 
     render() {
         return <div className="profileBubble">
-                <img src={profileBubbleVector} />
+                <img src={profileBubbleVector} alt="" />
                 <div className="profileBubble__img">
                     <img src={profileImage} alt="" />
                 </div>

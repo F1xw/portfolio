@@ -5,7 +5,7 @@ class FwNavbar extends React.Component {
   render() {
     return <div className="FwNavbar">
         <div className="FwNavbar__logo">
-            <img src={this.props.logo} />
+            <img src={this.props.logo} alt="" />
         </div>
         <ul className="FwNavbar__links">
             {this.props.children}

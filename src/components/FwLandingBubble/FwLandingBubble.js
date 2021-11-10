@@ -7,7 +7,7 @@ class FwLandingBubble extends React.Component {
 
     render() {
         return <div className="landingBubble">
-                <img src={landingBubbleVector} />
+                <img src={landingBubbleVector} alt="" />
                 <div className="landingBubble__text">
                     <h1>Hello, my name is <br /><span>
                         <l>F</l><l>l</l><l>o</l><l>r</l><l>i</l><l>a</l><l>n</l>
