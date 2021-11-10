@@ -7,6 +7,29 @@
   --col-bg-link-active: #03A6A6;
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #f24968 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #f24968;
+    border-radius: 10px;
+    border: 0px none #ffffff;
+  }
+
 .App {
   position: absolute;
   top: 0;

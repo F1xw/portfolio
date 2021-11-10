@@ -1,5 +1,5 @@
 .FwNavbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -9,6 +9,12 @@
     align-items: center;
     overflow: hidden;
     justify-content: center;
+    z-index: 50;
+    transition: transform .3s ease-in-out;
+}
+
+.FwNavbar--hidden {
+    transform: translateY(-80px);
 }
 
 .FwNavbar__logo {
