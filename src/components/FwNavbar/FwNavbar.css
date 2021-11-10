@@ -25,6 +25,10 @@
 }
 
 
+.FwNavbar__logo img {
+    width: 50px;
+}
+
 .FwNavbar__logo:hover {
     background-color: var(--col-bg);
     border-radius: 25%;
