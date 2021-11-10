@@ -9,7 +9,7 @@ class FwButton extends React.Component {
 
   processClick() {
     if (this.props.href !== undefined) {
-      window.open(this.props.href, '_blank')
+      window.open(this.props.href, "_self")
     }else if (this.props.onClick !== undefined) {
       this.props.onClick()
     }else{

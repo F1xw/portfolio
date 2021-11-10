@@ -1,8 +1,16 @@
 .content {
     width: 100%;
-    height: calc(100% - 80px);
+    min-height: 100vh;
     position: relative;
-    margin-top: 80px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background: var(--col-bg);
+}
+
+.content:first-of-type {
+    height: calc(100vh - 80px);
+    margin-top: 80px;
 }
