@@ -10,14 +10,14 @@ class FwLandingPage extends React.Component {
     render() {
         return (
         <div className="wrapper">
-            <div className="content content--fullHeight">
+            <div className="content">
                 <FwLandingBubble />
                 <FwProfileBubble />
             </div>
-            <div className="content content--fullHeight">
+            <div className="content">
                 <FwAboutMe />
             </div>
-            <div className="content content--fullHeight">
+            <div className="content">
                 <FwSkills />
             </div>
         </div>
