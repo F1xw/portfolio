@@ -92,7 +92,7 @@
     transition: background-color .3s ease, color .3s ease;
 }
 
-.FwContactPage__linksListItem a {
+.FwContactPage__linksListItem h4 {
     margin-left: 50px;
 }
 

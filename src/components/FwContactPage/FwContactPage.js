@@ -31,7 +31,7 @@ class FwContactPage extends React.Component {
             <div className="FwContactPage content">
                 <div className="FwContactPage__faq">
                     <ul className="FwContactPage__faqList">
-                        <li className={this.state.activeIndex == 0 ? "FwContactPage__faqListItem active": "FwContactPage__faqListItem"} onClick={this.handleClick} data-index={0}>
+                        <li className={parseInt(this.state.activeIndex) ===  0 ? "FwContactPage__faqListItem active": "FwContactPage__faqListItem"} onClick={this.handleClick} data-index={0}>
                             <span className="FwContactPage__faqListItemTitle">Freelance job inquiry</span><FaChevronRight />
                         </li>
                         <div className="FwContactPage__faqListItemContent">
@@ -43,7 +43,7 @@ class FwContactPage extends React.Component {
                                 </p>
                             </div>
                         </div>
-                        <li className={this.state.activeIndex == 1 ? "FwContactPage__faqListItem active": "FwContactPage__faqListItem"} onClick={this.handleClick} data-index={1}>
+                        <li className={parseInt(this.state.activeIndex) === 1 ? "FwContactPage__faqListItem active": "FwContactPage__faqListItem"} onClick={this.handleClick} data-index={1}>
                             <span className="FwContactPage__faqListItemTitle">Report a bug</span><FaChevronRight />
                         </li>
                         <div className="FwContactPage__faqListItemContent">
@@ -55,7 +55,7 @@ class FwContactPage extends React.Component {
                                 </p>
                             </div>
                         </div>
-                        <li className={this.state.activeIndex == 2 ? "FwContactPage__faqListItem active": "FwContactPage__faqListItem"} onClick={this.handleClick} data-index={2}>
+                        <li className={parseInt(this.state.activeIndex) ===  2 ? "FwContactPage__faqListItem active": "FwContactPage__faqListItem"} onClick={this.handleClick} data-index={2}>
                             <span className="FwContactPage__faqListItemTitle">Anything else</span><FaChevronRight />
                         </li>
                         <div className="FwContactPage__faqListItemContent">
@@ -69,11 +69,11 @@ class FwContactPage extends React.Component {
                 </div>
                 <div className="FwContactPage__links">
                     <ul className="FwContactPage__linksList">
-                        <li onClick={() => {window.open("https://github.com/F1xw", "_blank")}} className="FwContactPage__linksListItem"><a href="#"><FaGithub /> &nbsp; GitHub</a></li>
-                        <li onClick={() => {window.open("mailto:flo@flowei.tech", "_blank")}} className="FwContactPage__linksListItem"><a href="#"><FaEnvelope /> &nbsp; E-Mail</a></li>
-                        <li onClick={() => {window.open("https://twitter.com/flowei_", "_blank")}} className="FwContactPage__linksListItem"><a href=""><FaTwitter /> &nbsp; Twitter</a></li>
-                        <li onClick={() => {window.open("https://discord.gg/6fNn2htBuj", "_blank")}} className="FwContactPage__linksListItem"><a href=""><FaDiscord /> &nbsp; Discord</a></li>
-                        <li onClick={() => {window.open("https://paypal.me/f1xw", "_blank")}} className="FwContactPage__linksListItem"><a href=""><FaPaypal /> &nbsp; Donate</a></li>
+                        <li onClick={() => {window.open("https://github.com/F1xw", "_blank")}} className="FwContactPage__linksListItem"><h4><FaGithub /> &nbsp; GitHub</h4></li>
+                        <li onClick={() => {window.open("mailto:flo@flowei.tech", "_blank")}} className="FwContactPage__linksListItem"><h4><FaEnvelope /> &nbsp; E-Mail</h4></li>
+                        <li onClick={() => {window.open("https://twitter.com/flowei_", "_blank")}} className="FwContactPage__linksListItem"><h4><FaTwitter /> &nbsp; Twitter</h4></li>
+                        <li onClick={() => {window.open("https://discord.gg/6fNn2htBuj", "_blank")}} className="FwContactPage__linksListItem"><h4><FaDiscord /> &nbsp; Discord</h4></li>
+                        <li onClick={() => {window.open("https://paypal.me/f1xw", "_blank")}} className="FwContactPage__linksListItem"><h4><FaPaypal /> &nbsp; Donate</h4></li>
                     </ul>
                 </div>
             </div>
