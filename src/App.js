@@ -13,8 +13,6 @@ class App extends React.Component {
     this.state = {
       activeTab: 0,
       activeSite: "landing",
-      hiddenNav: false,
-      prevScrollPos: 0
     }
     this.handleTabClick = this.handleTabClick.bind(this)
     this.ActiveSite = this.ActiveSite.bind(this)

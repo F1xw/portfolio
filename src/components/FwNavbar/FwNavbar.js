@@ -1,6 +1,8 @@
 import React from 'react';
+import reactDom from 'react-dom';
 import Scroll from 'react-scroll';
 import "./FwNavbar.css";
+import FwEasterEgg from '../FwEasterEgg/FwEasterEgg';
 
 
 class FwNavbar extends React.Component {
@@ -9,9 +11,11 @@ class FwNavbar extends React.Component {
     super(props);
     this.state = {
       hiddenNav: false,
-      prevScrollPos: 0
+      prevScrollPos: 0,
+      logoClickCounter: 0,
     }
     this.handleScroll = this.handleScroll.bind(this)
+    this.scrollTo = this.scrollTo.bind(this)
   }
 
   componentDidMount() {
@@ -22,7 +26,11 @@ class FwNavbar extends React.Component {
 
     var hiddenNav;
 
-    if (this.state.prevScrollPos <= document.documentElement.scrollTop) {
+    var currPos = document.documentElement.scrollTop;
+
+    if (currPos <= 400) {
+      hiddenNav = false
+    }else if (this.state.prevScrollPos <= currPos) {
       hiddenNav = true
     }else{
       hiddenNav = false
@@ -30,14 +38,23 @@ class FwNavbar extends React.Component {
 
     this.setState({
       hiddenNav: hiddenNav,
-      prevScrollPos: document.documentElement.scrollTop
+      prevScrollPos: currPos
     })
 
-    console.log(document.documentElement.scrollTop)
+    console.log(currPos)
 
   }
 
   scrollTo() {
+    if (this.state.logoClickCounter === 7) {
+      var temp = document.createElement("div");
+      reactDom.render(<FwEasterEgg />, temp);
+      document.body.innerHTML = temp.querySelector(".FwEasterEgg").outerHTML;
+    }else{
+      this.setState({
+        logoClickCounter: this.state.logoClickCounter+1
+      })
+    }
     Scroll.animateScroll.scrollTo(0)
   }
 

@@ -40,6 +40,14 @@
   scroll-behavior: smooth;
 }
 
+.wrapper {
+  pointer-events: none;
+}
+
+.content > div {
+  pointer-events: all;
+}
+
 @keyframes float {
 	0% {
 		transform: translatey(0px);
