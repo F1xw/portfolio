@@ -1,0 +1,132 @@
+@import "/src/mediaQueries.scss";
+
+.FwNavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--col-content-bg);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    z-index: 50;
+    transition: transform .3s ease-in-out, height .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    @include gt-sm {
+        .FwNavbar--hidden {
+            transform: translateY(-80px);
+        }
+    }
+
+    @include lt-md {
+        align-items: flex-start;
+        padding-top: 10px;
+        box-shadow: 0px 0px 36px -21px rgba(0,0,0,0.75);
+
+        &.active {
+            height: 230px !important;
+        }
+    }
+
+}
+
+
+.FwNavbar__logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    left:15px;
+    border-radius: 50%;
+    transition: border-radius .2s ease-in-out, background-color .3s ease-in-out, transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: transparent;
+
+    img {
+        width: 50px;
+    }
+
+    &:hover {
+        background-color: var(--col-bg);
+        border-radius: 25%;
+    }
+
+    &:active {
+        transform: rotate(45deg);
+    }
+}
+
+.FwNavbar__links {
+
+    @include lt-md {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: stretch;
+    }
+
+    & > li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        float: left;
+
+        @include lt-md {
+            display: none;
+
+            .FwNavbar.active & {
+                display: block;
+            }
+        }
+    }
+}
+
+
+.FwNavbar__burgerham {
+    display: none;
+    position: fixed;
+    right: 25px;
+    top: auto;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50%;
+    transition: width .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: transparent;
+
+    &::before, &::after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: var(--col-secondary);
+        transition: transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .FwNavbar.active & {
+        &::before {
+            transform: rotate(45deg) translateX(10px);
+        }
+
+        &::after {
+            transform: rotate(-45deg) translateX(10px);
+        }
+    }
+
+    &:hover {
+        width: 50px;
+    }
+
+    @include lt-md {
+        display: flex;
+    }
+}

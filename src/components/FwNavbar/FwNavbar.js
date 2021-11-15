@@ -1,7 +1,7 @@
 import React from 'react';
 import reactDom from 'react-dom';
 import Scroll from 'react-scroll';
-import "./FwNavbar.css";
+import "./FwNavbar.scss";
 import FwEasterEgg from '../FwEasterEgg/FwEasterEgg';
 
 
@@ -13,9 +13,11 @@ class FwNavbar extends React.Component {
       hiddenNav: false,
       prevScrollPos: 0,
       logoClickCounter: 0,
+      navToggle: false,
     }
-    this.handleScroll = this.handleScroll.bind(this)
-    this.scrollTo = this.scrollTo.bind(this)
+    this.handleScroll = this.handleScroll.bind(this);
+    this.scrollTo = this.scrollTo.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
   }
 
   componentDidMount() {
@@ -45,6 +47,12 @@ class FwNavbar extends React.Component {
 
   }
 
+  toggleNav() {
+    this.setState({
+      navToggle: this.state.navToggle ? false : true,
+    })
+  }
+
   scrollTo() {
     if (this.state.logoClickCounter === 7) {
       var temp = document.createElement("div");
@@ -62,7 +70,7 @@ class FwNavbar extends React.Component {
   render() {
 
     var navBarClassList = this.state.hiddenNav ? "FwNavbar FwNavbar--hidden" : "FwNavbar";
-
+    var navBarClassList = navBarClassList + (this.state.navToggle ? " active" : "");
 
     return <div className={navBarClassList}>
         <div onClick={this.scrollTo} className="FwNavbar__logo">
@@ -71,6 +79,7 @@ class FwNavbar extends React.Component {
         <ul className="FwNavbar__links">
             {this.props.children}
         </ul>
+        <div onClick={this.toggleNav} className="FwNavbar__burgerham"></div>
     </div>;
   }
 }

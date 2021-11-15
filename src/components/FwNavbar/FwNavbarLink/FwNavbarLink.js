@@ -1,5 +1,5 @@
 import React from 'react';
-import "./FwNavbarLink.css";
+import "./FwNavbarLink.scss";
 
 class FwNavbarLink extends React.Component {
     constructor(props) {

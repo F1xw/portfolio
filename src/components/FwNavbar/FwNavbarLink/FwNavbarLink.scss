@@ -1,0 +1,43 @@
+@import "/src/mediaQueries.scss";
+
+.FwNavbarLink {
+    min-width: 130px;
+    height: 35px;
+    border-radius: 0px;
+    border: 1px solid #000;
+    margin: 0 20px 0 20px;
+    padding: 0px 20px 0px 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: box-shadow .2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .2s ease-in-out;
+
+    &:hover:not(.active) {
+        box-shadow: 10px 10px 0px 0px var(--col-secondary);
+    }
+
+    &:active:not(.active) {
+        box-shadow: 5px 5px 0px 0px var(--col-secondary);
+    }
+
+    &.active {
+        background-color: var(--col-primary);
+        color: var(--col-secondary);
+        letter-spacing: 4px;
+        cursor: default;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    @include lt-md {
+        text-align: center;
+        padding: 0 5px 5px 0;
+        margin: 10px;
+
+        p {
+            margin: 10px;
+        }
+    }
+}
