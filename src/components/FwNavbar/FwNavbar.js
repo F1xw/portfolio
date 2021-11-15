@@ -69,10 +69,10 @@ class FwNavbar extends React.Component {
 
   render() {
 
-    var navBarClassList = this.state.hiddenNav ? "FwNavbar FwNavbar--hidden" : "FwNavbar";
-    var navBarClassList = navBarClassList + (this.state.navToggle ? " active" : "");
+    var navClassMod_hidden = this.state.hiddenNav ? "FwNavbar FwNavbar--hidden" : "FwNavbar";
+    var navClassMod_active = navClassMod_hidden + (this.state.navToggle ? " active" : "");
 
-    return <div className={navBarClassList}>
+    return <div className={navClassMod_active}>
         <div onClick={this.scrollTo} className="FwNavbar__logo">
             <img src={this.props.logo} alt="" />
         </div>
