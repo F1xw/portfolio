@@ -1,8 +1,9 @@
 import React from 'react';
-import exampleProject from '../../assets/exampleProject.jpg';
 import samcamProject from '../../assets/samcamProject.jpg';
 import humcastProject from '../../assets/humcastProject.jpg';
-import "./FwProjectsPage.css";
+import shareliProject from '../../assets/shareliProject.jpg';
+import p2pProject from '../../assets/p2pProject.jpg';
+import "./FwProjectsPage.scss";
 
 class FwProjectsPage extends React.Component {
 
@@ -55,7 +56,7 @@ class FwProjectsPage extends React.Component {
                 </div>
                 <div className="FwProjectsPage__projectItem projectItem--tall">
                     <div className="FwProjectsPage__projectItemImage">
-                        <img src={exampleProject} alt="" />
+                        <img src={shareliProject} alt="" />
                     </div>
                     <div className="FwProjectsPage__projectItemText">
                         <h1>Shareli.me</h1>
@@ -72,6 +73,23 @@ class FwProjectsPage extends React.Component {
                                 <a href="https://github.com/F1xw/shareli.me" target="_blank" rel="noreferrer">GitHub Repo</a>
                             </p>
                         </p>                   
+                    </div>
+                </div>
+                <div className="FwProjectsPage__projectItem projectItem--long">
+                    <div className="FwProjectsPage__projectItemText">
+                        <h1>Peer-to-Peer Chat</h1>
+                        <hr />
+                        <p>
+                            This project was part of my paper on Peer-to-Peer networking. I created a 2 person chatroom to visualize the concept of Peer-to-Peer.
+                            <br />
+                            <br />
+                            <p class="FwProjectsPage__projectItemLinks">
+                                <a href="https://github.com/F1xw/p2p-chat" target="_blank" rel="noreferrer">GitHub Repo</a>
+                            </p>
+                        </p>
+                    </div>
+                    <div className="FwProjectsPage__projectItemImage">
+                        <img src={p2pProject} alt="" />
                     </div>
                 </div>
                 <div className="FwProjectsPage__projectItem">
@@ -92,23 +110,6 @@ class FwProjectsPage extends React.Component {
                                 <a href="https://github.com/F1xw/guccibot" target="_blank" rel="noreferrer">GitHub Gucci Bot</a>
                             </p>
                         </p>
-                    </div>
-                </div>
-                <div className="FwProjectsPage__projectItem projectItem--long">
-                    <div className="FwProjectsPage__projectItemText">
-                        <h1>Peer-to-Peer Chat</h1>
-                        <hr />
-                        <p>
-                            This project was part of my paper on Peer-to-Peer networking. I created a 2 person chatroom to visualize the concept of Peer-to-Peer.
-                            <br />
-                            <br />
-                            <p class="FwProjectsPage__projectItemLinks">
-                                <a href="https://github.com/F1xw/p2p-chat" target="_blank" rel="noreferrer">GitHub Repo</a>
-                            </p>
-                        </p>
-                    </div>
-                    <div className="FwProjectsPage__projectItemImage">
-                        <img src={exampleProject} alt="" />
                     </div>
                 </div>
             </div>
