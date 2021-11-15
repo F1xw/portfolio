@@ -1,5 +1,5 @@
 import logo from './assets/logo.svg';
-import './App.css';
+import './App.scss';
 import FwNavbar from './components/FwNavbar/FwNavbar';
 import FwNavbarLink from './components/FwNavbar/FwNavbarLink/FwNavbarLink';
 import FwLandingPage from './components/FwLandingPage/FwLandingPage';import React from 'react';
