@@ -1,6 +1,6 @@
 import React from "react";
 import { FaChevronRight, FaGithub, FaEnvelope, FaTwitter, FaPaypal, FaDiscord } from 'react-icons/fa';
-import './FwContactPage.css';
+import './FwContactPage.scss';
 
 class FwContactPage extends React.Component {
 
