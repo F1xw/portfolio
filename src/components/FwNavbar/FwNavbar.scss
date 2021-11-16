@@ -24,9 +24,12 @@
         align-items: flex-start;
         padding-top: 10px;
         box-shadow: 0px 0px 36px -21px rgba(0,0,0,0.75);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6978992280505952) 89%, rgba(255,255,255,.5) 100%); 
+        
 
         &.active {
             height: 230px !important;
+            
         }
     }
 

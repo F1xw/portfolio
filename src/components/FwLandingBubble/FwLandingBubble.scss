@@ -1,0 +1,83 @@
+@import "/src/mediaQueries.scss";
+
+.landingBubble {
+    position: relative;
+    animation: float 10s ease-in-out infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+        position: absolute;
+        width: 615px;
+        z-index: -1;
+    }
+
+    @include lt-lg {
+        img {
+            width: 400px;
+        }
+        
+        margin-top: 60px;
+        margin-left: 200px;
+        align-self:flex-start;
+    }
+
+    @include lt-sm {
+        margin-left: 0;
+        align-self: center;
+
+        img {
+            width: 370px;
+        }
+    }
+}
+
+.landingBubble__text {
+    z-index: 10;
+    cursor: default !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    margin-left: 100px;
+
+    h1 {
+        font-size: 45px;
+    }
+
+    span {
+        font-size: 60px;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+    }
+
+    l {
+        transition: background-color .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-color: var(--col-secondary);
+        transform: rotate(0deg);
+
+        &:hover {
+            background-color: var(--col-primary);
+            transition: background-color .1s ease-in-out;
+        }
+    }
+
+    @include lt-lg {
+
+        margin: 0;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        span {
+            font-size: 45px;
+        }
+     }
+}

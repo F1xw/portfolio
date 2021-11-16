@@ -2,7 +2,7 @@ import React from 'react';
 import * as Scroll from 'react-scroll';
 import FwButton from '../FwButton/FwButton';
 import landingBubbleVector from '../../assets/bubbleLanding.svg'
-import "./FwLandingBubble.css";
+import "./FwLandingBubble.scss";
 
 class FwLandingBubble extends React.Component {
 

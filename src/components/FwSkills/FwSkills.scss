@@ -1,0 +1,97 @@
+@import "/src/mediaQueries.scss";
+
+.FwSkills {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    position:relative;
+
+    @include lt-lg {
+        flex-direction: column;
+    }
+}
+
+.FwSkills__title {
+    width: 500px;
+    height: 270px;
+    background-image: url("../../assets/bubbleSkillsTitle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; 
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    animation: float 7s ease-in-out infinite;
+
+    h1 {
+        text-align: left;
+    }
+
+    span {
+        color: var(--col-secondary);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 40px;
+    }
+
+    @include lt-md {
+        width: 600px;
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+
+    @include lt-sm {
+        width: 85vw;
+    }
+}
+
+
+
+.FwSkills__skills {
+    width: 700px;
+    height: 570px;
+    background-image: url("../../assets/bubbleLanding.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    canvas {
+        margin-left: -100px;
+    }
+    
+
+    @include lt-md {
+        width: 900px;
+        height: 300px;
+
+        .tag-cloud span {
+            font-size: 15px !important;
+        }
+
+        canvas {
+            width: 300px !important;
+            height: 300px !important;
+        }
+    }
+
+    @include lt-sm {
+        width: 85vw;
+
+    }
+}
+
+
+@keyframes colorShift {
+    0%, 100% {
+        filter: brightness(100%);
+    }
+    50% {
+        filter: brightness(130%);
+    }
+}

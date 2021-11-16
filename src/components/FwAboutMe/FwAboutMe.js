@@ -2,7 +2,7 @@ import React from 'react';
 import FwButton from '../FwButton/FwButton';
 import * as Scroll from 'react-scroll';
 import aboutMeBubble from '../../assets/bubbleAboutMe.svg';
-import "./FwAboutMe.css";
+import "./FwAboutMe.scss";
 
 class FwAboutMe extends React.Component {
 

@@ -1,24 +1,34 @@
 import React from 'react';
-import { TagCloud } from 'react-tagcloud'
-import "./FwSkills.css";
+import wordSphere from './wordSphere';
+import "./FwSkills.scss";
+
 
 class FwSkills extends React.Component {
 
-    render() {
+    componentDidMount() {
+        
+        const canvas = document.getElementById('canvas');
 
-        const data = [
-            { value: 'JavaScript', count: 25 },
-            { value: 'React', count: 5 },
-            { value: 'NodeJS', count: 20 },
-            { value: 'CSS3', count: 30 },
-            { value: 'HTML5', count: 30 },
-            { value: 'SQL', count: 25 },
-            { value: 'PHP', count: 35 },
-            { value: 'Python', count: 30 },
-            { value: 'Flutter', count: 15 },
-            { value: 'Unity', count: 10 },
-          ]
-          
+        const texts = [
+        'HTML5', 'JavaScript', 'CSS3', 'Python',
+        "React", "SQL", "JSON", "NodeJS", "Flutter",
+        "Dart", "PHP", "Apache2", "Nginx", "Unity"
+        
+        ];
+        const counts = [1,2,4,4,2,1];
+
+        const options = {
+        tilt: Math.PI / 9,
+        initialVelocityX: 0.09,
+        initialVelocityY: 0.09,
+        initialRotationX: Math.PI * 0.14,
+        initialRotationZ: 0
+        };
+ 
+        wordSphere(canvas, texts, counts, options);
+    }
+
+    render() {          
 
         return (
         <div className="FwSkills">
@@ -26,22 +36,13 @@ class FwSkills extends React.Component {
                 <h1>A selection of <br/><span>My Skills</span></h1>
             </div>
             <div className="FwSkills__skills">
-            <TagCloud
-                minSize={15}
-                maxSize={55}
-                tags={data}
-                shuffle={true}
-                colorOptions={{
-                    luminosity: 'dark',
-                    hue: 'purple'
-                }}
-                onClick={tag => alert(`'${tag.value}' was selected!`)}
-            />
+                <canvas id="canvas"></canvas>
             </div>
         </div>
         );
     }
 
 }
+
 
 export default FwSkills;

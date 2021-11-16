@@ -1,0 +1,68 @@
+@import "/src/mediaQueries.scss";
+
+.FwAboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: float 10s ease-in-out infinite;
+
+    img {
+        width: 1000px;
+        position: absolute;
+    }
+    
+    @include lt-lg {
+        img {
+            display: none;
+        }
+
+        background-color: white;
+        width: 70vw;
+    }
+
+    @include lt-sm {
+        width: 90vw;
+    }   
+}
+
+.FwAboutMe__text {
+    z-index: 1;
+    width: 700px;
+    text-align: justify;
+
+    h1 {
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--col-secondary);
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .FwButton {
+        float: right;
+        top: 60px;
+        right: 165px;
+    }
+
+    @include lt-lg {
+        width: auto;
+        padding: 0px 20px 40px 20px; 
+        
+        p {
+            padding: 5px;
+            margin-bottom: 50px;
+        }
+
+        .FwButton {
+            top: auto;
+            right: auto;
+            float: none;
+        }
+    }
+
+}

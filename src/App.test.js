@@ -1,8 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render } from '@testing-library/react';
+import FwLandingBubble from './components/FwLandingBubble/FwLandingBubble';
 
 test('renders landing page', () => {
-  render(<App />);
-  const linkElement = screen.getByText('My Skills');
-  expect(linkElement).toBeInTheDocument();
+  const {container} = render(<FwLandingBubble />);
+  expect(container.getElementsByClassName("landingBubble__text")[0]).toBeInTheDocument();
 });

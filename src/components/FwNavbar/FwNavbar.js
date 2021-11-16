@@ -43,8 +43,6 @@ class FwNavbar extends React.Component {
       prevScrollPos: currPos
     })
 
-    console.log(currPos)
-
   }
 
   toggleNav() {

@@ -1,0 +1,70 @@
+@import "/src/mediaQueries.scss";
+
+.FwAlert {
+    position: fixed;
+    bottom: 35px;
+    left: 15px;
+    transform: translateX(-500px);
+    background-color: var(--col-primary);
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 10px 10px 0px 0px var(--col-secondary);
+
+    .FwAlert__title {
+        color: var(--col-secondary);
+        font-size: 25px;
+        font-weight: bold;
+
+    }
+
+    hr {
+        border: none;
+        width: 250px;
+        height: 2px;
+        background-color: var(--col-bg);
+        margin-left: 0;
+    }
+
+    .FwAlert__body {
+        color: white;
+        font-size: 17px;
+    }
+
+    .FwAlert__times {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: white;
+        transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:hover {
+            transform: scale(150%);
+        }
+    }
+
+    &.FwAlert--active {
+        transform: translateX(0px);
+    }
+
+    &.FwAlert--closing {
+        transform: translateX(-500px);
+    }
+
+    @include lt-md {
+        height: 70px;
+        width: 350px;
+        padding: 20px 20px 35px 20px;
+        
+        .FwAlert__title {
+            font-size: 20px;
+        }
+
+        .FwAlert__body {
+            font-size: 15px;
+        }
+    }
+}
