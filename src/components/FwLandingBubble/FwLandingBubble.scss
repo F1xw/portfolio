@@ -20,11 +20,12 @@
         }
         
         margin-top: 60px;
-        margin-left: 200px;
+        margin-left: 25%;
         align-self:flex-start;
     }
 
     @include lt-sm {
+        margin-top: 10vh;
         margin-left: 0;
         align-self: center;
 

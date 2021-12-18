@@ -19,4 +19,9 @@
     @include lt-lg {
         flex-direction: column;
     }
+
+    @include lt-sm {
+        justify-content: flex-start;
+        min-height: 90vh;
+    }
 }

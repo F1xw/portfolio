@@ -9,7 +9,7 @@ class FwNavbarLink extends React.Component {
       }
   
   handleClick() {
-    this.props.onClick(this.props.id, this.props.target)
+    this.props.onClick(this.props.target)
   }
 
   componentDidUpdate(oldProps) {

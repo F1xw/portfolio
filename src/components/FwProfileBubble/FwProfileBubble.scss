@@ -13,7 +13,7 @@
 
     @include lt-lg {
         align-self: flex-end;
-        margin-right: 100px;
+        margin-right: 20%;
 
         img {
             width: 250px;
@@ -21,6 +21,7 @@
     }
 
     @include lt-sm {
+        margin-top: 18vh;
         margin-right: 0;
         align-self: center;
     }
