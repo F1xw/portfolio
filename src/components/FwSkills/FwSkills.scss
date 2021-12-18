@@ -45,6 +45,7 @@
 
     @include lt-sm {
         width: 85vw;
+        margin-top: 0;
     }
 }
 
@@ -53,7 +54,7 @@
 .FwSkills__skills {
     width: 700px;
     height: 570px;
-    background-image: url("../../assets/bubbleLanding.svg");
+    background-image: url("../../assets/bubbleSkills.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -61,28 +62,30 @@
     align-items: center;
     justify-content: center;
 
-    canvas {
-        margin-left: -100px;
+    div {
+        width: 400px;
+        height: 400px;
     }
-    
 
     @include lt-md {
         width: 900px;
         height: 300px;
 
-        .tag-cloud span {
-            font-size: 15px !important;
-        }
-
-        canvas {
-            width: 300px !important;
-            height: 300px !important;
+        div {
+            position: absolute;
+            width: 30%;
+            height: 30%;
         }
     }
 
     @include lt-sm {
         width: 85vw;
-
+        
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
     }
 }
 
