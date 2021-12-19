@@ -1,6 +1,6 @@
 import React from 'react';
 import profileBubbleVector from '../../assets/bubbleProfile.svg'
-import profileImage from '../../assets/imageProfile.bmp'
+import profileImage from '../../assets/imageProfile.jpg'
 import "./FwProfileBubble.scss";
 
 class FwProfileBubble extends React.Component {
