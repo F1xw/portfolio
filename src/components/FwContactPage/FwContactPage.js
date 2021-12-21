@@ -69,11 +69,11 @@ class FwContactPage extends React.Component {
                 </div>
                 <div className="FwContactPage__links">
                     <ul className="FwContactPage__linksList">
-                        <li className="FwContactPage__linksListItem"><a href="https://github.com/F1xw" target="_blank"><h4><FaGithub /> &nbsp; GitHub</h4></a></li>
-                        <li className="FwContactPage__linksListItem"><a href="mailto:flo@flowei.tech" target="_blank"><h4><FaEnvelope /> &nbsp; E-Mail</h4></a></li>
-                        <li className="FwContactPage__linksListItem"><a href="https://twitter.com/flowei_" target="_blank"><h4><FaTwitter /> &nbsp; Twitter</h4></a></li>
-                        <li className="FwContactPage__linksListItem"><a href="https://discord.gg/6fNn2htBuj" target="_blank"><h4><FaDiscord /> &nbsp; Discord</h4></a></li>
-                        <li className="FwContactPage__linksListItem"><a href="https://ko-fi.com/C0C47KC3D" target="_blank"><h4><FaCoffee /> &nbsp; Donate</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="https://github.com/F1xw" target="_blank" rel="noreferrer"><h4><FaGithub /> &nbsp; GitHub</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="mailto:flo@flowei.tech" target="_blank" rel="noreferrer"><h4><FaEnvelope /> &nbsp; E-Mail</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="https://twitter.com/flowei_" target="_blank" rel="noreferrer"><h4><FaTwitter /> &nbsp; Twitter</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="https://discord.gg/6fNn2htBuj" target="_blank" rel="noreferrer"><h4><FaDiscord /> &nbsp; Discord</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="https://ko-fi.com/C0C47KC3D" target="_blank" rel="noreferrer"><h4><FaCoffee /> &nbsp; Donate</h4></a></li>
                     </ul>
                 </div>
             </div>
