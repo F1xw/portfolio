@@ -16,12 +16,15 @@
         padding-top: 80px;
     }
 
-    @include lt-lg {
+    @include lt-md {
         flex-direction: column;
+
+        &:first-of-type {
+            padding-top: 60px;
+        }
     }
 
     @include lt-sm {
-        justify-content: flex-start;
         min-height: 90vh;
     }
 }
