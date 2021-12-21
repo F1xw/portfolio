@@ -1,5 +1,5 @@
 import React from "react";
-import { FaChevronRight, FaGithub, FaEnvelope, FaTwitter, FaPaypal, FaDiscord } from 'react-icons/fa';
+import { FaChevronRight, FaGithub, FaEnvelope, FaTwitter, FaCoffee, FaDiscord } from 'react-icons/fa';
 import './FwContactPage.scss';
 
 class FwContactPage extends React.Component {
@@ -73,7 +73,7 @@ class FwContactPage extends React.Component {
                         <li onClick={() => {window.open("mailto:flo@flowei.tech", "_blank")}} className="FwContactPage__linksListItem"><h4><FaEnvelope /> &nbsp; E-Mail</h4></li>
                         <li onClick={() => {window.open("https://twitter.com/flowei_", "_blank")}} className="FwContactPage__linksListItem"><h4><FaTwitter /> &nbsp; Twitter</h4></li>
                         <li onClick={() => {window.open("https://discord.gg/6fNn2htBuj", "_blank")}} className="FwContactPage__linksListItem"><h4><FaDiscord /> &nbsp; Discord</h4></li>
-                        <li onClick={() => {window.open("https://paypal.me/f1xw", "_blank")}} className="FwContactPage__linksListItem"><h4><FaPaypal /> &nbsp; Donate</h4></li>
+                        <li onClick={() => {window.open("https://ko-fi.com/C0C47KC3D", "_blank")}} className="FwContactPage__linksListItem"><h4><FaCoffee /> &nbsp; Donate</h4></li>
                     </ul>
                 </div>
             </div>
