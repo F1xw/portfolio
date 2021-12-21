@@ -20,30 +20,30 @@ class App extends React.Component {
       "contact"
     ]
     this.handleTabClick = this.handleTabClick.bind(this)
+    this.handleTabChange = this.handleTabChange.bind(this)
     this.ActiveSite = this.ActiveSite.bind(this)
   }
 
-  componentDidMount() {
-    if (window.location.pathname !== "/") {
-      let setPath = window.location.pathname.replace("/", "");
+  handleTabChange() {
+    let setPath = window.location.pathname.replace("/", "");
+    if (setPath !== "/") {
       if (this.tabs.includes(setPath)) {
         this.setState({
           activeTab: setPath
         });
       }
+    }else{
+      this.setState({
+        activeTab: "landing"
+      });
     }
+  }
 
-    // window.addEventListener('hashchange', function(){
-    //   console.log("Location change")
-    //   if (window.location.pathname !== "/") {
-    //     let setPath = window.location.pathname.replace("/", "");
-    //     if (this.tabs.includes(setPath) && setPath !== this.state.activeTab) {
-    //       this.setState({
-    //         activeTab: setPath
-    //       });
-    //     }
-    //   }
-    // });
+  componentDidMount() {
+    this.handleTabChange()
+    window.onpopstate = () => {
+      this.handleTabChange();
+    };
   }
 
   handleTabClick (target) {
