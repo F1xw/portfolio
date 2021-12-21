@@ -14,9 +14,9 @@ class FwLandingBubble extends React.Component {
         return <div className="landingBubble">
                 <img src={landingBubbleVector} alt="" />
                 <div className="landingBubble__text">
-                    <h1>Hi! My name is <br /><span>
-                        <l>F</l><l>l</l><l>o</l><l>r</l><l>i</l><l>a</l><l>n</l>
-                    </span></h1>
+                    <h1>Hi! My name is <br /><div className="landingBubble__text_letters">
+                        <span>F</span><span>l</span><span>o</span><span>r</span><span>i</span><span>a</span><span>n</span>
+                    </div></h1>
                     <FwButton onClick={this.scrollTo}>About Me</FwButton>
                 </div>
             </div>;
