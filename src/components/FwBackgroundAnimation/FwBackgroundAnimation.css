@@ -1,11 +1,11 @@
 .FwBackgroundAnimation {
     background-color: var(--col-bg);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    overflow: hidden !important;
+    overflow: clip !important;
 }
 
 .bg-animation-box {
