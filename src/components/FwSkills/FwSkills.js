@@ -4,30 +4,35 @@ import "./FwSkills.scss";
 
 const data = {
     labels: [
-            "", 'HTML5', 'JavaScript', 'CSS3', 'Python',
+            'HTML5', 'JavaScript', 'CSS3', 'Python',
             "React", "SQL", "JSON", "NodeJS", "Flutter",
             "Dart", "PHP", "Apache2", "Nginx", "Unity"
         ],
     datasets: [
       {
         label: 'Skill Level',
-        data: [0, 8, 7, 7, 6, 3, 6, 8, 5, 4, 4, 7, 6, 5, 4],
+        data: [8, 7, 7, 6, 3, 6, 8, 5, 2, 2, 7, 6, 5, 4],
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1,
+        borderColor: 'rgba(255, 99, 132, 1)'
       },
     ]
   };
   
 const options = {
   scale: {
-    beginAtZero: true,
+    min: 0,
+    max: 10
   },
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
     legend: {
       display: false
+    }
+  },
+  elements: {
+    line: {
+      borderWidth: 1
     }
   }
 };
