@@ -108,7 +108,7 @@
     margin: 0;
 }
 
-.FwContactPage__linksListItem {
+.FwContactPage__linksListItem a {
     width: 100%;
     height: 50px;
     border: .1px solid rgba(0, 0, 0, 0.158);
@@ -116,17 +116,19 @@
     align-items: center;
     cursor: pointer;
     transition: background-color .3s ease, color .3s ease;
+    color: black;
 
     h4 {
         margin-left: 50px;
         display: flex;
         align-items: center;
-        transition: margin-left .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: margin-left .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     &:hover {
         background-color:rgba(0, 0, 0, 0.041);
         color: var(--col-secondary);
+        text-decoration: none;
 
         h4:not(svg) {
             margin-left: 20px;

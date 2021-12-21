@@ -69,11 +69,11 @@ class FwContactPage extends React.Component {
                 </div>
                 <div className="FwContactPage__links">
                     <ul className="FwContactPage__linksList">
-                        <li onClick={() => {window.open("https://github.com/F1xw", "_blank")}} className="FwContactPage__linksListItem"><h4><FaGithub /> &nbsp; GitHub</h4></li>
-                        <li onClick={() => {window.open("mailto:flo@flowei.tech", "_blank")}} className="FwContactPage__linksListItem"><h4><FaEnvelope /> &nbsp; E-Mail</h4></li>
-                        <li onClick={() => {window.open("https://twitter.com/flowei_", "_blank")}} className="FwContactPage__linksListItem"><h4><FaTwitter /> &nbsp; Twitter</h4></li>
-                        <li onClick={() => {window.open("https://discord.gg/6fNn2htBuj", "_blank")}} className="FwContactPage__linksListItem"><h4><FaDiscord /> &nbsp; Discord</h4></li>
-                        <li onClick={() => {window.open("https://ko-fi.com/C0C47KC3D", "_blank")}} className="FwContactPage__linksListItem"><h4><FaCoffee /> &nbsp; Donate</h4></li>
+                        <li className="FwContactPage__linksListItem"><a href="https://github.com/F1xw" target="_blank"><h4><FaGithub /> &nbsp; GitHub</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="mailto:flo@flowei.tech" target="_blank"><h4><FaEnvelope /> &nbsp; E-Mail</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="https://twitter.com/flowei_" target="_blank"><h4><FaTwitter /> &nbsp; Twitter</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="https://discord.gg/6fNn2htBuj" target="_blank"><h4><FaDiscord /> &nbsp; Discord</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="https://ko-fi.com/C0C47KC3D" target="_blank"><h4><FaCoffee /> &nbsp; Donate</h4></a></li>
                     </ul>
                 </div>
             </div>
