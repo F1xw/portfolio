@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.b8e1f29d.chunk.css",
-    "main.js": "/static/js/main.2951c28f.chunk.js",
-    "main.js.map": "/static/js/main.2951c28f.chunk.js.map",
+    "main.css": "/static/css/main.6e59d488.chunk.css",
+    "main.js": "/static/js/main.88cecc69.chunk.js",
+    "main.js.map": "/static/js/main.88cecc69.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f027f2bf.js",
     "runtime-main.js.map": "/static/js/runtime-main.f027f2bf.js.map",
     "static/js/2.87d27a58.chunk.js": "/static/js/2.87d27a58.chunk.js",
     "static/js/2.87d27a58.chunk.js.map": "/static/js/2.87d27a58.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.b8e1f29d.chunk.css.map": "/static/css/main.b8e1f29d.chunk.css.map",
+    "static/css/main.6e59d488.chunk.css.map": "/static/css/main.6e59d488.chunk.css.map",
     "static/js/2.87d27a58.chunk.js.LICENSE.txt": "/static/js/2.87d27a58.chunk.js.LICENSE.txt",
     "static/media/bubbleAboutMe.ac65490e.svg": "/static/media/bubbleAboutMe.ac65490e.svg",
     "static/media/bubbleLanding.08b9dfc0.svg": "/static/media/bubbleLanding.08b9dfc0.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.f027f2bf.js",
     "static/js/2.87d27a58.chunk.js",
-    "static/css/main.b8e1f29d.chunk.css",
-    "static/js/main.2951c28f.chunk.js"
+    "static/css/main.6e59d488.chunk.css",
+    "static/js/main.88cecc69.chunk.js"
   ]
 }
