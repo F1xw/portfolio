@@ -1,8 +1,8 @@
 import React from 'react';
-import reactDom from 'react-dom';
+// import reactDom from 'react-dom';
 import Scroll from 'react-scroll';
 import "./FwNavbar.scss";
-import FwEasterEgg from '../FwEasterEgg/FwEasterEgg';
+// import FwEasterEgg from '../FwEasterEgg/FwEasterEgg';
 
 
 class FwNavbar extends React.Component {
