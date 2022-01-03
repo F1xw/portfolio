@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaChevronRight } from 'react-icons/fa';
 import samcamProject from '../../assets/samcamProject.jpg';
 import humcastProject from '../../assets/humcastProject.jpg';
 import shareliProject from '../../assets/shareliProject.jpg';
@@ -7,13 +8,39 @@ import "./FwProjectsPage.scss";
 
 class FwProjectsPage extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.handleClick = this.handleClick.bind(this)
+
+        this.state = {
+            activeIndex: null
+        }
+    }
+
+
+    handleClick(e) {
+        if (this.state.activeIndex === e.target.dataset.index) {
+            this.setState({
+                activeIndex: null
+            })
+        }else{
+            this.setState({
+                activeIndex: e.target.dataset.index
+            })
+        }
+    }
+
     render() {
         return <div className="FwProjectsPage content">
             <div className="FwProjectsPage_projectContainer">
-                <div className="FwProjectsPage__projectItem projectItem--long">
+                <div className={parseInt(this.state.activeIndex) === 0 ? "FwProjectsPage__projectItem active": "FwProjectsPage__projectItem"} onClick={this.handleClick} data-index={0}>
+                    <FaChevronRight />
                     <div className="FwProjectsPage__projectItemText">
                         <h1>Humcast</h1>
                         <hr />
+                        <div className="FwProjectsPage__projectItemImage">
+                            <img src={humcastProject} alt="" />
+                        </div>
                         <p>
                             Humcast is a podcast made by students at my school (Humboldt-Gymnasium Solingen). I took it upon myself to design (and manage) not only the logos and
                             cover arts or the Instagram page but the website aswell. I designed the graphics in a way, so that they would match across platforms. While this portfolio
@@ -28,17 +55,15 @@ class FwProjectsPage extends React.Component {
                             </p>
                         </p>
                     </div>
-                    <div className="FwProjectsPage__projectItemImage">
-                        <img src={humcastProject} alt="" />
-                    </div>
                 </div>
-                <div className="FwProjectsPage__projectItem projectItem--tall">
-                    <div className="FwProjectsPage__projectItemImage">
-                        <img src={samcamProject} alt="" />
-                    </div>
+                <div className={parseInt(this.state.activeIndex) === 1 ? "FwProjectsPage__projectItem active": "FwProjectsPage__projectItem"} onClick={this.handleClick} data-index={1}>
+                    <FaChevronRight />
                     <div className="FwProjectsPage__projectItemText">
                         <h1>SamCam</h1>
                         <hr />
+                        <div className="FwProjectsPage__projectItemImage">
+                            <img src={samcamProject} alt="" />
+                        </div>
                         <p>
                             SamCam is a project that I made for my sisters birthday. I made an app using flutter to log data about my sister's hamster. I also used
                             a Raspberry Pi Zero and its camera component to create a security camera of some kind. It streams the camera's view to my server encrypted with SSL
@@ -54,13 +79,14 @@ class FwProjectsPage extends React.Component {
                         </p>
                     </div>
                 </div>
-                <div className="FwProjectsPage__projectItem projectItem--tall">
-                    <div className="FwProjectsPage__projectItemImage">
-                        <img src={shareliProject} alt="" />
-                    </div>
+                <div className={parseInt(this.state.activeIndex) === 2 ? "FwProjectsPage__projectItem active": "FwProjectsPage__projectItem"} onClick={this.handleClick} data-index={2}>
+                    <FaChevronRight />
                     <div className="FwProjectsPage__projectItemText">
                         <h1>Shareli.me</h1>
                         <hr />
+                        <div className="FwProjectsPage__projectItemImage">
+                            <img src={shareliProject} alt="" />
+                        </div>
                         <p>
                             This is an idea I came up with before knowing about WeTransfer. I wanted to transfer data from my Phone to my PC
                             or to my friends easily. Shareli.me was a file sharing website that alowed you to upload your file and get a link in return.
@@ -75,10 +101,14 @@ class FwProjectsPage extends React.Component {
                         </p>                   
                     </div>
                 </div>
-                <div className="FwProjectsPage__projectItem projectItem--long">
+                <div className={parseInt(this.state.activeIndex) === 3 ? "FwProjectsPage__projectItem active": "FwProjectsPage__projectItem"} onClick={this.handleClick} data-index={3}>
+                    <FaChevronRight />
                     <div className="FwProjectsPage__projectItemText">
                         <h1>Peer-to-Peer Chat</h1>
                         <hr />
+                        <div className="FwProjectsPage__projectItemImage">
+                            <img src={p2pProject} alt="" />
+                        </div>
                         <p>
                             This project was part of my paper on Peer-to-Peer networking. I created a 2 person chatroom to visualize the concept of Peer-to-Peer.
                             <br />
@@ -88,11 +118,9 @@ class FwProjectsPage extends React.Component {
                             </p>
                         </p>
                     </div>
-                    <div className="FwProjectsPage__projectItemImage">
-                        <img src={p2pProject} alt="" />
-                    </div>
                 </div>
-                <div className="FwProjectsPage__projectItem">
+                <div className={parseInt(this.state.activeIndex) === 4 ? "FwProjectsPage__projectItem active": "FwProjectsPage__projectItem"} onClick={this.handleClick} data-index={4}>
+                    <FaChevronRight />
                     <div className="FwProjectsPage__projectItemText">
                         <h1>Small Projects</h1>
                         <hr />
