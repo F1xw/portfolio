@@ -52,15 +52,15 @@ class FwNavbar extends React.Component {
   }
 
   scrollTo() {
-    if (this.state.logoClickCounter === 7) {
-      var temp = document.createElement("div");
-      reactDom.render(<FwEasterEgg />, temp);
-      document.body.innerHTML = temp.querySelector(".FwEasterEgg").outerHTML;
-    }else{
-      this.setState({
-        logoClickCounter: this.state.logoClickCounter+1
-      })
-    }
+    // if (this.state.logoClickCounter === 7) {
+    //   var temp = document.createElement("div");
+    //   reactDom.render(<FwEasterEgg />, temp);
+    //   document.body.innerHTML = temp.querySelector(".FwEasterEgg").outerHTML;
+    // }else{
+    //   this.setState({
+    //     logoClickCounter: this.state.logoClickCounter+1
+    //   })
+    // }
     Scroll.animateScroll.scrollTo(0)
   }
 
