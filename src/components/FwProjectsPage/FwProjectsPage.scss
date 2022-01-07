@@ -18,6 +18,10 @@
         padding: 0;
         padding-top: 25px;
     }
+
+    @include lt-sm {
+        padding-top: 0;
+    }
 }
 
 .FwProjectsPage__projectItem {
@@ -44,15 +48,25 @@
         svg {
             transform: rotate(90deg);
         }
+
+        @include lt-md {
+            img {
+                height: 300px;
+            }
+        }
     }
 
+    
     &:hover {
-        transform: scale(105%);
-
+        @include gt-md {
+            transform: scale(105%);
+        }
+        
         svg {
             color: var(--col-secondary);
         }
     }
+    
 
     svg {
         pointer-events: none;
@@ -65,12 +79,12 @@
     @include lt-md {
         width: 300px;
         height: auto;
+    }
 
-        &:hover {
-            img {
-                height: 300px;
-            }
-        }
+    @include lt-sm {
+        width: 100%;
+        margin: 0;
+        border-bottom: 3px solid var(--col-bg);
     }
 }
 
@@ -101,7 +115,9 @@
     }
 
     @include lt-md {
-        width: 300px;
+        img {
+            width: 300px;
+        }
     }
  }
 
