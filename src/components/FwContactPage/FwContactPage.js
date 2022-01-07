@@ -61,7 +61,7 @@ class FwContactPage extends React.Component {
                         <div className="FwContactPage__faqListItemContent">
                             <div className="text">
                                 <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur hic in voluptas odio adipisci, modi quae quas obcaecati illo architecto fuga deleniti aut possimus magni ad, officiis iste? Provident, sequi?
+                                    Feel free to message me at <a href="mailto:flo@flowei.tech" rel="noreferrer">flo@flowei.tech</a> for any other question you might have.
                                 </p>
                             </div>
                         </div>
