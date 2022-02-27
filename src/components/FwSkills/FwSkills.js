@@ -6,12 +6,12 @@ const data = {
     labels: [
             'HTML5', 'JavaScript', 'CSS3', 'Python',
             "React", "SQL", "JSON", "NodeJS", "Flutter",
-            "Dart", "PHP", "Apache2", "Nginx", "Unity"
+            "Dart", "PHP", "Apache2", "Nginx", "Unity", "Java"
         ],
     datasets: [
       {
         label: 'Skill Level',
-        data: [8, 7, 7, 6, 3, 6, 8, 5, 2, 2, 7, 6, 5, 4],
+        data: [8, 7, 7, 6, 3, 6, 8, 5, 2, 2, 7, 6, 5, 4, 2],
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)'
       },
