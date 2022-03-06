@@ -1,31 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bbe6f36.chunk.css",
-    "main.js": "/static/js/main.2ce62837.chunk.js",
-    "main.js.map": "/static/js/main.2ce62837.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f027f2bf.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f027f2bf.js.map",
-    "static/js/2.38487936.chunk.js": "/static/js/2.38487936.chunk.js",
-    "static/js/2.38487936.chunk.js.map": "/static/js/2.38487936.chunk.js.map",
+    "main.css": "/static/css/main.42c880ab.css",
+    "main.js": "/static/js/main.61023b3a.js",
+    "static/media/imageProfile.jpg": "/static/media/imageProfile.140dbf003b293955404f.jpg",
+    "static/media/humcastProject.jpg": "/static/media/humcastProject.0507254fdbbaa34c572b.jpg",
+    "static/media/samcamProject.jpg": "/static/media/samcamProject.8e954eb724f53d5a1688.jpg",
+    "static/media/p2pProject.jpg": "/static/media/p2pProject.69a73cc2cd9dc674471e.jpg",
+    "static/media/shareliProject.jpg": "/static/media/shareliProject.84b0c3ab40e7bbdd5073.jpg",
+    "static/media/rocket.png": "/static/media/rocket.77db887df45793f74e54.png",
     "index.html": "/index.html",
-    "static/css/main.6bbe6f36.chunk.css.map": "/static/css/main.6bbe6f36.chunk.css.map",
-    "static/js/2.38487936.chunk.js.LICENSE.txt": "/static/js/2.38487936.chunk.js.LICENSE.txt",
-    "static/media/bubbleAboutMe.ac65490e.svg": "/static/media/bubbleAboutMe.ac65490e.svg",
-    "static/media/bubbleLanding.08b9dfc0.svg": "/static/media/bubbleLanding.08b9dfc0.svg",
-    "static/media/bubbleProfile.95bc2ffb.svg": "/static/media/bubbleProfile.95bc2ffb.svg",
-    "static/media/FwSkills.scss": "/static/media/bubbleSkillsTitle.b409b93a.svg",
-    "static/media/humcastProject.0507254f.jpg": "/static/media/humcastProject.0507254f.jpg",
-    "static/media/imageProfile.140dbf00.jpg": "/static/media/imageProfile.140dbf00.jpg",
-    "static/media/logo.e2188ddf.svg": "/static/media/logo.e2188ddf.svg",
-    "static/media/p2pProject.69a73cc2.jpg": "/static/media/p2pProject.69a73cc2.jpg",
-    "static/media/FwBackgroundAnimation.css": "/static/media/rocket.77db887d.png",
-    "static/media/samcamProject.8e954eb7.jpg": "/static/media/samcamProject.8e954eb7.jpg",
-    "static/media/shareliProject.84b0c3ab.jpg": "/static/media/shareliProject.84b0c3ab.jpg"
+    "static/media/bubbleAboutMe.svg": "/static/media/bubbleAboutMe.ac65490eb730eeecef4623f3c39d2303.svg",
+    "static/media/bubbleSkills.svg": "/static/media/bubbleSkills.4cbf23221eee9ce25d38.svg",
+    "static/media/bubbleLanding.svg": "/static/media/bubbleLanding.08b9dfc0de0ba654f082d65236291fe4.svg",
+    "static/media/bubbleSkillsTitle.svg": "/static/media/bubbleSkillsTitle.b409b93af16ec4b5a1e2.svg",
+    "static/media/logo.svg": "/static/media/logo.e2188ddf85f3c019c3899c33b1d2865a.svg",
+    "static/media/bubbleProfile.svg": "/static/media/bubbleProfile.95bc2ffba04883f21c7a7feb32bbda80.svg",
+    "main.42c880ab.css.map": "/static/css/main.42c880ab.css.map",
+    "main.61023b3a.js.map": "/static/js/main.61023b3a.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.f027f2bf.js",
-    "static/js/2.38487936.chunk.js",
-    "static/css/main.6bbe6f36.chunk.css",
-    "static/js/main.2ce62837.chunk.js"
+    "static/css/main.42c880ab.css",
+    "static/js/main.61023b3a.js"
   ]
 }
