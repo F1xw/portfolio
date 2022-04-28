@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.42c880ab.css",
-    "main.js": "/static/js/main.61023b3a.js",
-    "static/media/imageProfile.jpg": "/static/media/imageProfile.140dbf003b293955404f.jpg",
-    "static/media/humcastProject.jpg": "/static/media/humcastProject.0507254fdbbaa34c572b.jpg",
-    "static/media/samcamProject.jpg": "/static/media/samcamProject.8e954eb724f53d5a1688.jpg",
+    "main.css": "/static/css/main.fa9c7dc6.css",
+    "main.js": "/static/js/main.295d309f.js",
+    "static/media/imageProfile.jpg": "/static/media/imageProfile.db103a4e15ad8c62f7a1.jpg",
     "static/media/p2pProject.jpg": "/static/media/p2pProject.69a73cc2cd9dc674471e.jpg",
+    "static/media/humcastProject.jpg": "/static/media/humcastProject.e964795a1b2038e19c43.jpg",
+    "static/media/samcamProject.jpg": "/static/media/samcamProject.f8b45ba624ee7aa6245b.jpg",
     "static/media/shareliProject.jpg": "/static/media/shareliProject.84b0c3ab40e7bbdd5073.jpg",
-    "static/media/rocket.png": "/static/media/rocket.77db887df45793f74e54.png",
+    "static/media/rocket.png": "/static/media/rocket.c6495ffd139172506bc8.png",
     "index.html": "/index.html",
-    "static/media/bubbleAboutMe.svg": "/static/media/bubbleAboutMe.ac65490eb730eeecef4623f3c39d2303.svg",
-    "static/media/bubbleSkills.svg": "/static/media/bubbleSkills.4cbf23221eee9ce25d38.svg",
-    "static/media/bubbleLanding.svg": "/static/media/bubbleLanding.08b9dfc0de0ba654f082d65236291fe4.svg",
-    "static/media/bubbleSkillsTitle.svg": "/static/media/bubbleSkillsTitle.b409b93af16ec4b5a1e2.svg",
+    "static/media/bubbleAboutMe.svg": "/static/media/bubbleAboutMe.6aed0ebee6c9eb9d5de4080c9571c778.svg",
+    "static/media/bubbleSkills.svg": "/static/media/bubbleSkills.c4b810599e53598b6db9.svg",
+    "static/media/bubbleLanding.svg": "/static/media/bubbleLanding.1d1e8c149914a724169cc8b150075aae.svg",
+    "static/media/bubbleSkillsTitle.svg": "/static/media/bubbleSkillsTitle.9eb22bfb5b2f2dba9dc1.svg",
     "static/media/logo.svg": "/static/media/logo.e2188ddf85f3c019c3899c33b1d2865a.svg",
-    "static/media/bubbleProfile.svg": "/static/media/bubbleProfile.95bc2ffba04883f21c7a7feb32bbda80.svg",
-    "main.42c880ab.css.map": "/static/css/main.42c880ab.css.map",
-    "main.61023b3a.js.map": "/static/js/main.61023b3a.js.map"
+    "static/media/bubbleProfile.svg": "/static/media/bubbleProfile.de1a73b96b3cfb2b95b8b42d956b7af7.svg",
+    "main.fa9c7dc6.css.map": "/static/css/main.fa9c7dc6.css.map",
+    "main.295d309f.js.map": "/static/js/main.295d309f.js.map"
   },
   "entrypoints": [
-    "static/css/main.42c880ab.css",
-    "static/js/main.61023b3a.js"
+    "static/css/main.fa9c7dc6.css",
+    "static/js/main.295d309f.js"
   ]
 }
