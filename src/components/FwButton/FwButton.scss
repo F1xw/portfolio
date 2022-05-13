@@ -1,8 +1,10 @@
+@import "/src/mediaQueries.scss";
+
 .FwButton {
     position: relative;
     border: none;
     background-color: var(--col-primary);
-    color: var(--col-text);
+    color: #fff;
     font-size: 15px;
     display: flex;
     justify-content: center;
@@ -16,13 +18,20 @@
     transition: box-shadow .2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .2s ease-in-out;
     transform-origin: top left;
     cursor: pointer;
-}
 
-.FwButton:hover, .FwButton:focus-visible {
-    box-shadow: 10px 10px 0px 0px var(--col-secondary);
-}
+    &:hover, &:focus-visible {
+        box-shadow: 10px 10px 0px 0px var(--col-secondary);
+    }
 
-.FwButton:active {
-    box-shadow: 4px 4px 0px 0px var(--col-primary);
-    background-color: var(--col-secondary);
+    &:active {
+        box-shadow: 4px 4px 0px 0px var(--col-primary);
+        background-color: var(--col-secondary);
+    }
+
+
+    @include lt-sm {
+        min-width: 130px;
+        min-height: 44px;
+        font-size: 13px;
+    }   
 }

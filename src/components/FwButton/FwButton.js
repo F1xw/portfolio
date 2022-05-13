@@ -1,5 +1,5 @@
 import React from 'react';
-import "./FwButton.css";
+import "./FwButton.scss";
 
 class FwButton extends React.Component {
   constructor(props) {
