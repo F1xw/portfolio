@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.95263f39.css",
-    "main.js": "/static/js/main.4e8dd70b.js",
+    "main.css": "/static/css/main.40bb373f.css",
+    "main.js": "/static/js/main.30adf900.js",
     "static/media/imageProfile.jpg": "/static/media/imageProfile.db103a4e15ad8c62f7a1.jpg",
-    "static/media/humcastProject.jpg": "/static/media/humcastProject.e964795a1b2038e19c43.jpg",
     "static/media/samcamProject.jpg": "/static/media/samcamProject.f8b45ba624ee7aa6245b.jpg",
     "static/media/shareliProject.jpg": "/static/media/shareliProject.84b0c3ab40e7bbdd5073.jpg",
     "static/media/p2pProject.jpg": "/static/media/p2pProject.d4be29d7cb6db07fc4a4.jpg",
@@ -11,15 +10,15 @@
     "index.html": "/index.html",
     "static/media/bubbleAboutMe.svg": "/static/media/bubbleAboutMe.6aed0ebee6c9eb9d5de4080c9571c778.svg",
     "static/media/bubbleSkills.svg": "/static/media/bubbleSkills.c4b810599e53598b6db9.svg",
-    "static/media/bubbleLanding.svg": "/static/media/bubbleLanding.1d1e8c149914a724169cc8b150075aae.svg",
+    "static/media/bubbleLanding.svg": "/static/media/bubbleLanding.1d1e8c149914a724169c.svg",
     "static/media/bubbleSkillsTitle.svg": "/static/media/bubbleSkillsTitle.9eb22bfb5b2f2dba9dc1.svg",
     "static/media/logo.svg": "/static/media/logo.e2188ddf85f3c019c3899c33b1d2865a.svg",
-    "static/media/bubbleProfile.svg": "/static/media/bubbleProfile.de1a73b96b3cfb2b95b8b42d956b7af7.svg",
-    "main.95263f39.css.map": "/static/css/main.95263f39.css.map",
-    "main.4e8dd70b.js.map": "/static/js/main.4e8dd70b.js.map"
+    "static/media/bubbleProfile.svg": "/static/media/bubbleProfile.de1a73b96b3cfb2b95b8.svg",
+    "main.40bb373f.css.map": "/static/css/main.40bb373f.css.map",
+    "main.30adf900.js.map": "/static/js/main.30adf900.js.map"
   },
   "entrypoints": [
-    "static/css/main.95263f39.css",
-    "static/js/main.4e8dd70b.js"
+    "static/css/main.40bb373f.css",
+    "static/js/main.30adf900.js"
   ]
 }
