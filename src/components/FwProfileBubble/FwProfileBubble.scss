@@ -5,7 +5,13 @@
     animation: float 6s ease-in-out infinite alternate;
     display: flex;
     flex-direction: column;
-    
+    background-image: url("../../assets/bubbleProfile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 450px;
+    height: 450px;
+
     img {
         width: 450px;
         z-index: -1;
@@ -14,19 +20,18 @@
     }
 
     @include lt-lg {
-        img {
-            width: 350px;
-        }
+        width: 350px;
     }
 
     @include lt-md {
-        img {
-            width: 300px;
-        }
+        width: 300px;
     }
 
     @include lt-sm {
-        margin-top: 50px;
+        width: 250px;
+        margin-top: -60px;
+        margin-right: 20px;
+        align-self: flex-end;
     }
 }
 
@@ -55,6 +60,12 @@
     @include lt-md {
         img {
             width: 175px;
+        }
+    }
+
+    @include lt-sm {
+        img {
+            width: 140px;
         }
     }
 }

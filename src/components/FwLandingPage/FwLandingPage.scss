@@ -25,6 +25,9 @@
     }
 
     @include lt-sm {
+        &:first-of-type {
+            padding-top: 40px;
+        }
         min-height: 90vh;
     }
 }

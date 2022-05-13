@@ -46,6 +46,7 @@
     @include lt-sm {
         width: 85vw;
         margin-top: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -66,8 +67,6 @@
         width: 400px;
         height: 400px;
     }
-
-
 
     @include lt-lg {
         width: 900px;
@@ -93,21 +92,11 @@
 
     @include lt-sm {
         width: 85vw;
-        
+        margin-bottom: 50px;
         div {
             position: absolute;
             width: 60%;
             height: 60%;
         }
-    }
-}
-
-
-@keyframes colorShift {
-    0%, 100% {
-        filter: brightness(100%);
-    }
-    50% {
-        filter: brightness(130%);
     }
 }

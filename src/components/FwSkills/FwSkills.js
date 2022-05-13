@@ -43,10 +43,10 @@ class FwSkills extends React.Component {
 
         return (
         <div className="FwSkills">
-            <div className="FwSkills__title" name="skills">
+            <div className="FwSkills__title FwMod-darkMode-bg" name="skills">
                 <h1>A selection of <br/><span>My Skills</span></h1>
             </div>
-            <div className="FwSkills__skills">
+            <div className="FwSkills__skills FwMod-darkMode-bg">
                 <div>
                     <Radar data={data} options={options} />
                 </div>
