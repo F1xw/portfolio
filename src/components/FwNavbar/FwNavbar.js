@@ -1,35 +1,68 @@
 import React from 'react';
-// import reactDom from 'react-dom';
+import Cookies from "js-cookies";
 import Scroll from 'react-scroll';
 import "./FwNavbar.scss";
+import {FaSun, FaMoon} from "react-icons/fa";
 // import FwEasterEgg from '../FwEasterEgg/FwEasterEgg';
-
 
 class FwNavbar extends React.Component {
 
   constructor(props) {
+
+    //? Set default values for state and pass component props to parent class
     super(props);
     this.state = {
       hiddenNav: false,
       prevScrollPos: 0,
       logoClickCounter: 0,
       navToggle: false,
+      darkColorScheme: false
     }
+
+    //? Bind "this" to these functions
+    this.detectColorScheme = this.detectColorScheme.bind(this);
+    this.toggleColorScheme = this.toggleColorScheme.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
-    this.scrollTo = this.scrollTo.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
+    
   }
 
+  /*
+  * Will be run on load.
+  ? Adds an event listener for scrolling
+  ? Runs the detector function to apply color schemes
+  */
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll)
+    window.addEventListener("scroll", this.handleScroll);
+    this.detectColorScheme()
+  }
+  
+  /*
+  ? Sets the color scheme
+  ? Cookie will overwrite media query
+  */
+  detectColorScheme() {
+    let cookie = Cookies.getItem("fw_colorScheme");
+    if (cookie !== undefined) {
+      if (cookie === "dark") this.toggleColorScheme();
+      console.info("[Portfolio] Your preferred color scheme has been loaded. Any system wide color scheme settings will be overwritten. \n To unset use fw.removeColorScheme() or delete the fw_colorScheme cookie");
+    }else{
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) this.toggleColorScheme();
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        if (Cookies.getItem("fw__coloScheme")) return;
+        this.setState({
+          darkColorScheme: event.matches
+        }); 
+      });
+    }
   }
 
-  handleScroll (e) {
-
+  /*
+  ! CSS unimplemented
+  */
+  handleScroll() {
     var hiddenNav;
-
     var currPos = document.documentElement.scrollTop;
-
     if (currPos <= 400) {
       hiddenNav = false
     }else if (this.state.prevScrollPos <= currPos) {
@@ -37,47 +70,54 @@ class FwNavbar extends React.Component {
     }else{
       hiddenNav = false
     }
-
     this.setState({
       hiddenNav: hiddenNav,
       prevScrollPos: currPos
-    })
-
+    });
   }
 
+  //? Burgerham toggle function for mobile nav
   toggleNav() {
     this.setState({
       navToggle: this.state.navToggle ? false : true,
     })
   }
 
-  scrollTo() {
-    // if (this.state.logoClickCounter === 7) {
-    //   var temp = document.createElement("div");
-    //   reactDom.render(<FwEasterEgg />, temp);
-    //   document.body.innerHTML = temp.querySelector(".FwEasterEgg").outerHTML;
-    // }else{
-    //   this.setState({
-    //     logoClickCounter: this.state.logoClickCounter+1
-    //   })
-    // }
-    Scroll.animateScroll.scrollTo(0)
+  //? Function that will run, if the color scheme button is pressed
+  toggleColorScheme() {
+    if (this.state.darkColorScheme) {
+      this.setState({
+        darkColorScheme: false
+      });
+      Cookies.setItem("fw_colorScheme", "light", undefined, "/", "", true);
+      document.body.classList.add("color-scheme--light");
+      if (document.body.classList.contains("color-scheme--dark")) document.body.classList.remove("color-scheme--dark");
+    }else{
+      this.setState({
+        darkColorScheme: true
+      });
+      Cookies.setItem("fw_colorScheme", "dark", undefined, "/", "", true);
+      document.body.classList.add("color-scheme--dark");
+      if (document.body.classList.contains("color-scheme--light")) document.body.classList.remove("color-scheme--light");
+    }
   }
 
-
+  //? Renders the component
   render() {
-
     var navClassMod_hidden = this.state.hiddenNav ? "FwNavbar FwNavbar--hidden" : "FwNavbar";
     var navClassMod_active = navClassMod_hidden + (this.state.navToggle ? " active" : "");
 
     return <div className={navClassMod_active}>
-        <div onClick={this.scrollTo} className="FwNavbar__logo">
+        <div onClick={() => {Scroll.animateScroll.scrollTo(0)}} className="FwNavbar__logo">
             <img src={this.props.logo} alt="" />
         </div>
         <ul className="FwNavbar__links">
             {this.props.children}
         </ul>
         <div onClick={this.toggleNav} className="FwNavbar__burgerham"></div>
+        <div className="FwNavbar__colorSwitcher" onClick={this.toggleColorScheme} title="Changes the color scheme">
+          {this.state.darkColorScheme ? <FaSun /> : <FaMoon />}
+        </div>
     </div>;
   }
 }

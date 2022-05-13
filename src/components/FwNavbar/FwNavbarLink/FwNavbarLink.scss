@@ -4,7 +4,8 @@
     min-width: 130px;
     height: 35px;
     border-radius: 0px;
-    border: 1px solid #000;
+    border: 1px solid var(--col-text);
+    color: var(--col-text);
     margin: 0 20px 0 20px;
     padding: 0px 20px 0px 20px;
     letter-spacing: 2px;

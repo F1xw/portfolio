@@ -134,3 +134,44 @@
         display: flex;
     }
 }
+
+.FwNavbar__colorSwitcher {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    border-radius: 50%;
+    background-color: var(--col-content-bg);
+    transition: filter .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    svg {
+        fill: var(--col-text);
+        width: 50%;
+        height: 50%;
+        overflow: visible;
+    }
+
+    &:hover {
+        filter: invert(20%);
+    }
+
+    &:active {
+        transition: filter .3s;
+        filter: invert(15%);
+        transform: rotate(80deg);
+    }   
+
+    @include lt-md {
+        opacity: 0;
+        top: 15px;
+        right: 80px;
+
+        .FwNavbar.active & {
+            opacity: 1;
+        }
+    }
+}

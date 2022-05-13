@@ -31,13 +31,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--col-content-bg);
+    color: var(--col-text);
     padding: 50px;
     margin-bottom: 70px;
-    transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     &.active {
-        height: auto;
+        height: 900px;
+        
         img {
             height: 400px;
             opacity: 1;
@@ -111,7 +113,7 @@
         width: 400px;
         height: 0;
         opacity: 0;
-        transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .1s linear;
+        transition: height .2s cubic-bezier(0.075, 0.82, 0.165, 1), opacity .1s linear;
     }
 
     @include lt-md {
