@@ -1,4 +1,5 @@
 import React from 'react';
+import Cookies from 'js-cookies';
 import logo from './assets/logo.svg';
 import './App.scss';
 import FwNavbar from './components/FwNavbar/FwNavbar';
@@ -7,6 +8,7 @@ import FwLandingPage from './components/FwLandingPage/FwLandingPage';
 import FwProjectsPage from './components/FwProjectsPage/FwProjectsPage';
 import FwContactPage from './components/FwContactPage/FwContactPage';
 import FwBackgroundAnimation from './components/FwBackgroundAnimation/FwBackgroundAnimation';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -44,6 +46,19 @@ class App extends React.Component {
     window.onpopstate = () => {
       this.handleTabChange();
     };
+
+    window.fw = {
+      removeColorScheme: () => {
+        Cookies.removeItem("fw_colorScheme");
+        console.info("[Portfolio] Your color scheme has been reset. Media queries will now be used.");
+      },
+      setActiveTab: (tab) => {
+        if (!this.tabs.includes(tab)) return false;
+        this.setState({
+          activeTab: tab
+        });
+      }
+    }
   }
 
   handleTabClick (target) {
