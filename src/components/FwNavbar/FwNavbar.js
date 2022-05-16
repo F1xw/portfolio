@@ -1,9 +1,10 @@
 import React from 'react';
 import Cookies from "js-cookies";
-import Scroll from 'react-scroll';
 import "./FwNavbar.scss";
 import {FaSun, FaMoon} from "react-icons/fa";
 // import FwEasterEgg from '../FwEasterEgg/FwEasterEgg';
+
+const dayInAYear = getDayInAYear();
 
 class FwNavbar extends React.Component {
 
@@ -24,7 +25,7 @@ class FwNavbar extends React.Component {
     this.toggleColorScheme = this.toggleColorScheme.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
-    
+
   }
 
   /*
@@ -89,14 +90,14 @@ class FwNavbar extends React.Component {
       this.setState({
         darkColorScheme: false
       });
-      Cookies.setItem("fw_colorScheme", "light", undefined, "/", "", true);
+      Cookies.setItem("fw_colorScheme", "light", dayInAYear, "/", "", true);
       document.body.classList.add("color-scheme--light");
       if (document.body.classList.contains("color-scheme--dark")) document.body.classList.remove("color-scheme--dark");
     }else{
       this.setState({
         darkColorScheme: true
       });
-      Cookies.setItem("fw_colorScheme", "dark", undefined, "/", "", true);
+      Cookies.setItem("fw_colorScheme", "dark", dayInAYear, "/", "", true);
       document.body.classList.add("color-scheme--dark");
       if (document.body.classList.contains("color-scheme--light")) document.body.classList.remove("color-scheme--light");
     }
@@ -108,7 +109,7 @@ class FwNavbar extends React.Component {
     var navClassMod_active = navClassMod_hidden + (this.state.navToggle ? " active" : "");
 
     return <div className={navClassMod_active}>
-        <div onClick={() => {Scroll.animateScroll.scrollTo(0)}} className="FwNavbar__logo">
+        <div className="FwNavbar__logo">
             <img src={this.props.logo} alt="" />
         </div>
         <ul className="FwNavbar__links">
@@ -120,6 +121,14 @@ class FwNavbar extends React.Component {
         </div>
     </div>;
   }
+}
+
+function getDayInAYear() {
+  var d = new Date();
+  var year = d.getFullYear();
+  var month = d.getMonth();
+  var day = d.getDate();
+  return new Date(year + 1, month, day);
 }
 
 export default FwNavbar;
