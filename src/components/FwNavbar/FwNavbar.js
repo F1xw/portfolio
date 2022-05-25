@@ -44,17 +44,11 @@ class FwNavbar extends React.Component {
   */
   detectColorScheme() {
     let cookie = Cookies.getItem("fw_colorScheme");
-    if (cookie !== undefined) {
+    if (cookie !== null) {
       if (cookie === "dark") this.toggleColorScheme();
       console.info("[Portfolio] Your preferred color scheme has been loaded. Any system wide color scheme settings will be overwritten. \n To unset use fw.removeColorScheme() or delete the fw_colorScheme cookie");
     }else{
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) this.toggleColorScheme();
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        if (Cookies.getItem("fw__coloScheme")) return;
-        this.setState({
-          darkColorScheme: event.matches
-        }); 
-      });
     }
   }
 
