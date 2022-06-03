@@ -1,8 +1,8 @@
 import React from 'react';
-import FwAboutMe from '../FwAboutMe/FwAboutMe';
-import FwLandingBubble from '../FwLandingBubble/FwLandingBubble';
-import FwProfileBubble from '../FwProfileBubble/FwProfileBubble';
-import FwSkills from '../FwSkills/FwSkills';
+import FwAboutMe from '../../components/FwAboutMe/FwAboutMe';
+import FwLandingBubble from '../../components/FwLandingBubble/FwLandingBubble';
+import FwProfileBubble from '../../components/FwProfileBubble/FwProfileBubble';
+import FwSkills from '../../components/FwSkills/FwSkills';
 import "./FwLandingPage.scss";
 
 class FwLandingPage extends React.Component {

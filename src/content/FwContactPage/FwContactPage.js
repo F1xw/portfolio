@@ -1,5 +1,5 @@
 import React from "react";
-import { FaChevronRight, FaGithub, FaEnvelope, FaTwitter, FaCoffee, FaDiscord } from 'react-icons/fa';
+import { FaChevronRight, FaGithub, FaEnvelope, FaTwitter, FaCoffee } from 'react-icons/fa';
 import './FwContactPage.scss';
 
 class FwContactPage extends React.Component {
@@ -7,12 +7,10 @@ class FwContactPage extends React.Component {
     constructor(props) {
         super(props)
         this.handleClick = this.handleClick.bind(this)
-
         this.state = {
             activeIndex: null
         }
     }
-
 
     handleClick(e) {
         if (this.state.activeIndex === e.target.dataset.index) {
@@ -38,7 +36,7 @@ class FwContactPage extends React.Component {
                             <div className="text">
                                 <p>
                                     Thank you for being interested in my work. I will happily help you out, given that I have enough time on hand.
-                                    I don't have any fixed prices or work schedules, so I'll set these individually. For more information please send an E-Mail
+                                    I don't have any fixed prices or work schedules, so I'll set these individually.<br /><br /> For more information please send an E-Mail
                                     to <a href="mailto:freelance@flowei.tech">freelance@flowei.tech</a>. I will try to respond as quickly as possible.
                                 </p>
                             </div>
@@ -72,7 +70,6 @@ class FwContactPage extends React.Component {
                         <li className="FwContactPage__linksListItem"><a href="https://github.com/F1xw" target="_blank" rel="noreferrer"><h4><FaGithub /> &nbsp; GitHub</h4></a></li>
                         <li className="FwContactPage__linksListItem"><a href="mailto:flo@flowei.tech" target="_blank" rel="noreferrer"><h4><FaEnvelope /> &nbsp; E-Mail</h4></a></li>
                         <li className="FwContactPage__linksListItem"><a href="https://twitter.com/flowei_" target="_blank" rel="noreferrer"><h4><FaTwitter /> &nbsp; Twitter</h4></a></li>
-                        <li className="FwContactPage__linksListItem"><a href="https://discord.gg/6fNn2htBuj" target="_blank" rel="noreferrer"><h4><FaDiscord /> &nbsp; Discord</h4></a></li>
                         <li className="FwContactPage__linksListItem"><a href="https://ko-fi.com/C0C47KC3D" target="_blank" rel="noreferrer"><h4><FaCoffee /> &nbsp; Donate</h4></a></li>
                     </ul>
                 </div>

@@ -4,9 +4,11 @@ import logo from './assets/logo.svg';
 import './App.scss';
 import FwNavbar from './components/FwNavbar/FwNavbar';
 import FwNavbarLink from './components/FwNavbar/FwNavbarLink/FwNavbarLink';
-import FwLandingPage from './components/FwLandingPage/FwLandingPage';
-import FwProjectsPage from './components/FwProjectsPage/FwProjectsPage';
-import FwContactPage from './components/FwContactPage/FwContactPage';
+
+import FwLandingPage from './content/FwLandingPage/FwLandingPage';
+import FwProjectsPage from './content/FwProjectsPage/FwProjectsPage';
+import FwContactPage from './content/FwContactPage/FwContactPage';
+
 import FwBackgroundAnimation from './components/FwBackgroundAnimation/FwBackgroundAnimation';
 
 
@@ -97,7 +99,7 @@ class App extends React.Component {
           <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={2} onClick={this.handleTabClick} target="contact">Contact</FwNavbarLink>
         </FwNavbar>
         <this.ActiveSite />
-      </div>
+      </div> 
     );
   }
 }

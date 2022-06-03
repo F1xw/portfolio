@@ -1,30 +1,6 @@
 @import "/src/mediaQueries.scss";
 
-.FwProjectsPage {
-    margin-top: 80px;
-    overflow: hidden;
-}
-
-.FwProjectsPage_projectContainer {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 25px;
-    padding-top: 100px;
-    justify-content: space-evenly;
-    
-    @include lt-md {
-        padding: 0;
-        padding-top: 25px;
-    }
-
-    @include lt-sm {
-        padding-top: 0;
-    }
-}
-
-.FwProjectsPage__projectItem {
+.FwProjectItem {
     position: relative;
     width: 400px;
     height: 500px;
@@ -90,7 +66,7 @@
     }
 }
 
-.FwProjectsPage__projectItemText {
+.FwProjectItem__text {
     pointer-events: none;
     text-align: justify;
 
@@ -104,7 +80,7 @@
 }
 
 
- .FwProjectsPage__projectItemImage {
+.FwProjectItem__image {
     display: flex;
     justify-content: center;
     margin-top: 15px;
@@ -123,6 +99,18 @@
     }
  }
 
-.FwProjectsPage__projectItemLinks {
+.FwProjectItem__links {
     pointer-events: all;
+
+    a {
+        &::after {
+            content: "•";
+            color: white;
+            margin: 4px;
+        }
+    
+        &:last-of-type::after {
+            content: "";
+        }
+    }
 }
