@@ -9,15 +9,15 @@ class FwLandingPage extends React.Component {
 
     render() {
         return (
-        <div className="wrapper">
-            <div className="content">
+        <div className="FwLandingPage">
+            <div className="content" id="landing">
                 <FwLandingBubble />
                 <FwProfileBubble />
             </div>
-            <div className="content">
+            <div className="content" id="about">
                 <FwAboutMe />
             </div>
-            <div className="content">
+            <div className="content" id="skills">
                 <FwSkills />
             </div>
         </div>
