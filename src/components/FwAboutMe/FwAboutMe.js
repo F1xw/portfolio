@@ -1,13 +1,12 @@
 import React from 'react';
 import FwButton from '../FwButton/FwButton';
-import * as Scroll from 'react-scroll';
-import aboutMeBubble from '../../assets/bubbleAboutMe.svg';
+import aboutMeBubble from '../../assets/svg/bubbleAboutMe.svg';
 import "./FwAboutMe.scss";
 
 class FwAboutMe extends React.Component {
 
-    scrollTo() {
-        Scroll.animateScroll.scrollTo(window.innerHeight*2)
+    scroll() {
+        document.getElementById("skills").scrollIntoView();
     }
 
     render() {
@@ -23,7 +22,7 @@ class FwAboutMe extends React.Component {
                         If you are interested in reading my paper on Peer-to-Peer Networking (written in German) click <a href="/Facharbeit-Florian_Weissmeier.pdf" target="_blank" rel='noreferrer'>here</a>.
                         For a depiction of my skills please click on “Next”.
                     </p>
-                    <FwButton onClick={this.scrollTo}>Next</FwButton>
+                    <FwButton onClick={this.scroll}>Next</FwButton>
                 </div>
             </div>
         );
