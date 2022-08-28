@@ -12,7 +12,7 @@
     color: white;
 }
 
-.FwEasterEgg__field {
+.FwEasterEgg__board {
     width: 300px;
     height: 300px;
     display: flex;
@@ -20,13 +20,13 @@
     border: 4px solid var(--col-secondary);
 }
 
-.FwEasterEgg__field__button {
+.FwEasterEgg__board__button {
     width: 100px;
     height: 100px;
     background-color: var(--col-bg);
     color: var(--col-secondary);
     border: 2px solid var(--col-secondary);
-    transition: color .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: color .3s ease-in-out, background-color .2s ease-in-out;
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -37,6 +37,11 @@
 
     &:active {
         background-color: var(--col-primary);
+        color: var(--col-secondary);
+    }
+
+    &:not(:empty):hover, &:not(:empty):active {
+        background-color: var(--col-bg);
         color: var(--col-secondary);
     }
 }

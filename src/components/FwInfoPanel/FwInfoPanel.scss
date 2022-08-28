@@ -1,0 +1,41 @@
+@import "/src/mediaQueries.scss";
+
+.FwInfoPanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 45;
+    width: 100%;
+    height: 400px;
+    margin-top: -440px;
+    padding: 40px 0 0 20px;
+    background-color: var(--col-content-bg);
+    color: var(--col-text);
+    transition: margin-top .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    .FwInfoPanel__title {
+        font-size: 40px;
+        color: var(--col-secondary);
+    }
+
+    .FwInfoPanel__contents {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        ul {
+            margin: 10px 0 0 40px;
+            list-style-type: none;
+        }
+
+        .FwInfoPanel__copyright {
+            display: flex;
+            align-self: flex-end;
+            margin-left: 80px;
+        }
+    }
+
+    &.active {
+        margin-top: 0;
+    }
+}
