@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImage from '../../assets/imageProfile.jpg'
+import profileImage from '../../assets/avif/imageProfile.avif'
 import "./FwProfileBubble.scss";
 
 class FwProfileBubble extends React.Component {
