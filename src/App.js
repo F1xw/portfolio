@@ -1,15 +1,19 @@
 import React from 'react';
 import Cookies from 'js-cookies';
-import logo from './assets/logo.svg';
+// import { FaChevronRight } from 'react-icons/fa';
+
+import logo from './assets/svg/logo.svg';
 import './App.scss';
 import FwNavbar from './components/FwNavbar/FwNavbar';
 import FwNavbarLink from './components/FwNavbar/FwNavbarLink/FwNavbarLink';
+import FwInfoPanel from './components/FwInfoPanel/FwInfoPanel';
 
 import FwLandingPage from './content/FwLandingPage/FwLandingPage';
 import FwProjectsPage from './content/FwProjectsPage/FwProjectsPage';
 import FwContactPage from './content/FwContactPage/FwContactPage';
 
 import FwBackgroundAnimation from './components/FwBackgroundAnimation/FwBackgroundAnimation';
+import FwEasterEgg from './components/FwEasterEgg/FwEasterEgg';
 
 
 class App extends React.Component {
@@ -21,7 +25,8 @@ class App extends React.Component {
     this.tabs = [
       "landing",
       "projects",
-      "contact"
+      "contact",
+      "easteregg"
     ]
     this.handleTabClick = this.handleTabClick.bind(this)
     this.handleTabChange = this.handleTabChange.bind(this)
@@ -64,12 +69,17 @@ class App extends React.Component {
   }
 
   handleTabClick (target) {
-    this.setState({
-      activeTab: target
-    });
 
-    let newLocation = window.location.protocol + "//" + window.location.host + "/"+target + window.location.search;
-    window.history.pushState({ path: newLocation }, '', newLocation);
+    if(target.startsWith("url:")) {
+      window.location.assign("https://"+target.replace("url:", ""));
+    }else{
+      this.setState({
+        activeTab: target
+      });
+  
+      let newLocation = window.location.protocol + "//" + window.location.host + "/"+target + window.location.search;
+      window.history.pushState({ path: newLocation }, '', newLocation);
+    }
   }
 
   ActiveSite() {
@@ -82,6 +92,9 @@ class App extends React.Component {
       
       case "contact":
         return <FwContactPage />
+
+      case "easteregg":
+        return <FwEasterEgg />
     
       default:
         return <FwLandingPage />
@@ -93,10 +106,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <FwBackgroundAnimation />
+        <FwInfoPanel />
         <FwNavbar logo={logo}>
           <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={0} onClick={this.handleTabClick} target="landing">About Me</FwNavbarLink>
           <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={1} onClick={this.handleTabClick} target="projects">Projects</FwNavbarLink>
           <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={2} onClick={this.handleTabClick} target="contact">Contact</FwNavbarLink>
+          {/* <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={3} onClick={this.handleTabClick} target="url:leokra.de"><FaChevronRight/> Tools</FwNavbarLink> */}
         </FwNavbar>
         <this.ActiveSite />
       </div> 
