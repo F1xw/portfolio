@@ -1,7 +1,7 @@
 import React from 'react';
-import samcamProject from '../../assets/samcamProject.jpg';
-import shareliProject from '../../assets/shareliProject.jpg';
-import p2pProject from '../../assets/p2pProject.jpg';
+import samcamProject from '../../assets/avif/samcamProject.avif';
+import shareliProject from '../../assets/avif/shareliProject.avif';
+import p2pProject from '../../assets/avif/p2pProject.avif';
 import FwProjectItem from '../../components/FwProjectItem/FwProjectItem';
 import "./FwProjectsPage.scss";
 
