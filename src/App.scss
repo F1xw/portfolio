@@ -1,13 +1,19 @@
+@import "/src/mediaQueries.scss";
+
 :root {
   --col-primary: #35328C;
+  --col-lowAlpha: #ffffffBB;
   --col-secondary: #F24968;
   --col-text: #000;
   --col-content-bg: #fff;
   --col-bg: #222069;
+  --col-link: #7f7cd8;
+  --col-link-hover: #F24968;
   --col-link-active: #1c5f5f;
 
   .color-scheme--light {
     --col-primary: #35328C;
+    --col-lowAlpha: #ffffffBB;
     --col-secondary: #F24968;
     --col-text: #000;
     --col-content-bg: #fff;
@@ -18,10 +24,11 @@
   }
 
   .color-scheme--dark {
-    --col-primary: #3e3ba0; //2fa690
+    --col-primary: #3e3ba0;
+    --col-lowAlpha: #292929BB;
     --col-secondary: #F24968;
     --col-text: #fff;
-    --col-content-bg: rgb(41, 41, 41);
+    --col-content-bg: #292929;
     --col-bg: #1d1d1d;
     --col-link: #7f7cd8;
     --col-link-hover: #af334a;
@@ -41,6 +48,15 @@
   }
   a:active {
     color: var(--col-link-active);
+  }
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  @include lt-md {
+    scroll-snap-type: none;
   }
 }
 
@@ -67,7 +83,7 @@
 
   *::-webkit-scrollbar-thumb {
     background-color: #f24968;
-    border-radius: 10px;
+    border-radius: 0;
     border: 0px none #ffffff;
   }
 

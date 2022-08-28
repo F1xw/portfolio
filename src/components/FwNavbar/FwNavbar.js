@@ -1,7 +1,7 @@
 import React from 'react';
 import Cookies from "js-cookies";
 import "./FwNavbar.scss";
-import {FaSun, FaMoon} from "react-icons/fa";
+import {FaSun, FaMoon, /*FaServer*/} from "react-icons/fa";
 // import FwEasterEgg from '../FwEasterEgg/FwEasterEgg';
 
 const dayInAYear = getDayInAYear();
@@ -24,6 +24,7 @@ class FwNavbar extends React.Component {
     this.detectColorScheme = this.detectColorScheme.bind(this);
     this.toggleColorScheme = this.toggleColorScheme.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+    this.toggleInfoPanel = this.toggleInfoPanel.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
 
   }
@@ -52,9 +53,6 @@ class FwNavbar extends React.Component {
     }
   }
 
-  /*
-  ! CSS unimplemented
-  */
   handleScroll() {
     var hiddenNav;
     var currPos = document.documentElement.scrollTop;
@@ -62,6 +60,7 @@ class FwNavbar extends React.Component {
       hiddenNav = false
     }else if (this.state.prevScrollPos <= currPos) {
       hiddenNav = true
+      document.getElementsByClassName("FwInfoPanel")[0].classList.remove("active");
     }else{
       hiddenNav = false
     }
@@ -76,6 +75,15 @@ class FwNavbar extends React.Component {
     this.setState({
       navToggle: this.state.navToggle ? false : true,
     })
+  }
+
+  toggleInfoPanel() {
+    let classes = document.getElementsByClassName("FwInfoPanel")[0].classList;
+    if (classes.contains("active")) {
+      classes.remove("active");
+    }else{
+      classes.add("active");
+    }
   }
 
   //? Function that will run, if the color scheme button is pressed
@@ -97,19 +105,26 @@ class FwNavbar extends React.Component {
     }
   }
 
+  navigateStatus() {
+    window.location.assign("https://flowei.tech/status/")
+  }
+
   //? Renders the component
   render() {
     var navClassMod_hidden = this.state.hiddenNav ? "FwNavbar FwNavbar--hidden" : "FwNavbar";
     var navClassMod_active = navClassMod_hidden + (this.state.navToggle ? " active" : "");
 
     return <div className={navClassMod_active}>
-        <div className="FwNavbar__logo">
+        <div onClick={/*this.toggleInfoPanel*/ false} className="FwNavbar__logo">
             <img src={this.props.logo} alt="" />
         </div>
         <ul className="FwNavbar__links">
             {this.props.children}
         </ul>
         <div onClick={this.toggleNav} className="FwNavbar__burgerham"></div>
+        {/* <div class="FwNavbar__status" onClick={this.navigateStatus} title="Visit status page">
+            <FaServer />
+        </div> */}
         <div className="FwNavbar__colorSwitcher" onClick={this.toggleColorScheme} title="Changes the color scheme">
           {this.state.darkColorScheme ? <FaSun /> : <FaMoon />}
         </div>

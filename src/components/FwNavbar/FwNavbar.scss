@@ -12,11 +12,28 @@
     overflow: hidden;
     justify-content: center;
     z-index: 50;
-    transition: transform .3s ease-in-out, height .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform .3s ease-in-out, height .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .3s ease-out;
 
     @include gt-sm {
-        .FwNavbar--hidden {
-            transform: translateY(-80px);
+        &.FwNavbar--hidden {
+
+            &:not(:hover) {
+                transform: translateY(-50px);
+                background-color: var(--col-lowAlpha);
+                backdrop-filter: blur(10px);
+
+                .FwNavbar__logo {
+                    opacity: 0;
+                }
+    
+                .FwNavbar__links {
+                    opacity: 0;
+                }
+    
+                .FwNavbar__colorSwitcher {
+                    opacity: 0;
+                }
+            }
         }
     }
 
@@ -45,8 +62,9 @@
     height: 60px;
     left:15px;
     border-radius: 50%;
-    transition: border-radius .2s ease-in-out, background-color .3s ease-in-out, transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: border-radius .2s ease-in-out, background-color .3s ease-in-out, transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .3s ease-in;
     background-color: transparent;
+    opacity: 1;
 
     img {
         width: 50px;
@@ -63,6 +81,8 @@
 }
 
 .FwNavbar__links {
+    opacity: 1;
+    transition: opacity .3s ease-in;
 
     @include lt-md {
         position: absolute;
@@ -146,7 +166,11 @@
     top: 15px;
     border-radius: 50%;
     background-color: var(--col-content-bg);
-    transition: filter .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 1;
+    transition: filter .3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                opacity .3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                opacity .3s ease-in;
 
     svg {
         fill: var(--col-text);
@@ -163,6 +187,45 @@
         transition: filter .3s;
         filter: invert(15%);
         transform: rotate(80deg);
+    }   
+
+    @include lt-md {
+        opacity: 0;
+        top: 15px;
+        right: 80px;
+
+        .FwNavbar.active & {
+            opacity: 1;
+        }
+    }
+}
+
+.FwNavbar__status {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 110px;
+    top: 15px;
+    border-radius: 50%;
+    background-color: var(--col-content-bg);
+
+    svg {
+        fill: var(--col-text);
+        width: 50%;
+        height: 50%;
+        overflow: visible;
+    }
+
+    &:hover {
+        filter: invert(20%);
+    }
+
+    &:active {
+        transition: filter .3s;
+        filter: invert(15%);
     }   
 
     @include lt-md {
