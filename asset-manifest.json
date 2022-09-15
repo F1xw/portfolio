@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.80c45623.css",
-    "main.js": "/static/js/main.3a92e590.js",
+    "main.js": "/static/js/main.5fc2d2e8.js",
     "static/media/imageProfile.avif": "/static/media/imageProfile.d4a3fa987c5e7b382bdb.avif",
     "static/media/rocket.png": "/static/media/rocket.1ef150013220d314bc03.png",
     "static/media/samcamProject.avif": "/static/media/samcamProject.5fabac9c796f7b81c8d9.avif",
@@ -12,13 +12,13 @@
     "static/media/bubbleSkills.svg": "/static/media/bubbleSkills.c4b810599e53598b6db9.svg",
     "static/media/bubbleLanding.svg": "/static/media/bubbleLanding.1d1e8c149914a724169c.svg",
     "static/media/bubbleSkillsTitle.svg": "/static/media/bubbleSkillsTitle.9eb22bfb5b2f2dba9dc1.svg",
-    "static/media/logo.svg": "/static/media/logo.381fb95a317ce81e705534cfa02c32bd.svg",
+    "static/media/logo.svg": "/static/media/logo.e2188ddf85f3c019c3899c33b1d2865a.svg",
     "static/media/bubbleProfile.svg": "/static/media/bubbleProfile.de1a73b96b3cfb2b95b8.svg",
     "main.80c45623.css.map": "/static/css/main.80c45623.css.map",
-    "main.3a92e590.js.map": "/static/js/main.3a92e590.js.map"
+    "main.5fc2d2e8.js.map": "/static/js/main.5fc2d2e8.js.map"
   },
   "entrypoints": [
     "static/css/main.80c45623.css",
-    "static/js/main.3a92e590.js"
+    "static/js/main.5fc2d2e8.js"
   ]
 }
