@@ -42,11 +42,8 @@ class FwProjectsPage extends React.Component {
                         ]}
                     }>
                     
-                    I came up with this idea because a file I wanted to share exceeded the size limits of WhatsApp.
-                    Shareli.me was a file sharing website that allowed you to upload your file and get a link in return.
-                    You could give this link to your friends or open it on your PC to download the uploaded file. Shareli would host files for a day and delete them afterwards.
-                    I planned on adding subscriptions for longer storage and custom links but then decided to take it down as the domain
-                    ran out and I had security concerns about possible reverse shells or spamming.
+                    SamCam was one of my larger projects. It featured a fully functional REST API that was used by a Flutter App to communicate to a
+                    small IoT device that I built. The main purpose of this project was for my sister to be able to monitor and log data about her hamster.
                 </FwProjectItem>
                 <FwProjectItem
                     index={1}
