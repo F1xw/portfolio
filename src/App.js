@@ -11,6 +11,7 @@ import FwInfoPanel from './components/FwInfoPanel/FwInfoPanel';
 import FwLandingPage from './content/FwLandingPage/FwLandingPage';
 import FwProjectsPage from './content/FwProjectsPage/FwProjectsPage';
 import FwContactPage from './content/FwContactPage/FwContactPage';
+import FwReferencesPage from './content/FwReferencesPage/FwReferencesPage';
 
 import FwBackgroundAnimation from './components/FwBackgroundAnimation/FwBackgroundAnimation';
 import FwEasterEgg from './components/FwEasterEgg/FwEasterEgg';
@@ -25,6 +26,7 @@ class App extends React.Component {
     this.tabs = [
       "landing",
       "projects",
+      "references",
       "contact",
       "easteregg"
     ]
@@ -69,7 +71,6 @@ class App extends React.Component {
   }
 
   handleTabClick (target) {
-
     if(target.startsWith("url:")) {
       window.location.assign("https://"+target.replace("url:", ""));
     }else{
@@ -89,6 +90,9 @@ class App extends React.Component {
       
       case "projects":
         return <FwProjectsPage />
+
+      case "references":
+        return <FwReferencesPage />
       
       case "contact":
         return <FwContactPage />
@@ -110,7 +114,8 @@ class App extends React.Component {
         <FwNavbar logo={logo}>
           <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={0} onClick={this.handleTabClick} target="landing">About Me</FwNavbarLink>
           <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={1} onClick={this.handleTabClick} target="projects">Projects</FwNavbarLink>
-          <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={2} onClick={this.handleTabClick} target="contact">Contact</FwNavbarLink>
+          <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={2} onClick={this.handleTabClick} target="references">References</FwNavbarLink>
+          <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={3} onClick={this.handleTabClick} target="contact">Contact</FwNavbarLink>
           {/* <FwNavbarLink activeTabId={this.tabs.indexOf(this.state.activeTab)} id={3} onClick={this.handleTabClick} target="url:leokra.de"><FaChevronRight/> Tools</FwNavbarLink> */}
         </FwNavbar>
         <this.ActiveSite />

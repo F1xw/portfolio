@@ -15,10 +15,12 @@
 .FwSkills__title {
     width: 500px;
     height: 270px;
-    background-image: url("../../assets/svg/bubbleSkillsTitle.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center; 
+    background: var(--col-content-bg);
+    -webkit-mask-image: url("../../assets/svg/bubbleSkillsTitle.svg");
+    mask-image: url("../../assets/svg/bubbleSkillsTitle.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
     font-size: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -28,6 +30,7 @@
 
     h1 {
         text-align: left;
+        color: var(--col-text)
     }
 
     span {
@@ -55,10 +58,12 @@
 .FwSkills__skills {
     width: 700px;
     height: 570px;
-    background-image: url("../../assets/svg/bubbleSkills.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background: var(--col-content-bg);
+    -webkit-mask-image: url("../../assets/svg/bubbleSkills.svg");
+    mask-image: url("../../assets/svg/bubbleSkills.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,6 +71,10 @@
     div {
         width: 400px;
         height: 400px;
+    }
+
+    body.color-scheme--dark & canvas {
+        filter: invert(1);
     }
 
     @include lt-lg {

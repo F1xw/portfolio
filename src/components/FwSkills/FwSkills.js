@@ -3,17 +3,17 @@ import { Radar } from 'react-chartjs-2';
 import "./FwSkills.scss";
 
 const skills = {
-  'HTML5': 8,
+  'HTML': 8,
   'JavaScript': 7,
   'CSS3': 8,
   'Python': 7,
-  "React": 5,
-  "SQL": 7,
-  "NodeJS": 5,
-  "Flutter": 2,
-  "PHP": 7, 
-  "Power Apps": 4,
-  "Power Automate": 3
+  "React": 7,
+  "SQL": 6,
+  "NodeJS": 6,
+  "React Native / Expo": 4,
+  "PHP": 6, 
+  "Power Apps": 8,
+  "Power Automate": 7
 }
 
 const data = {
@@ -22,17 +22,25 @@ const data = {
       {
         label: 'Skill Level',
         data: Object.values(skills),
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)'
+        backgroundColor: '#da3d3d35',
+        borderColor: '#da3d3d'
       },
     ]
   };
   
 const options = {
+  scales: {
+    r: {
+      ticks: {
+        display: false
+      }
+    }
+  },
   scale: {
     min: 0,
-    max: 10
+    max: 10,
   },
+  ticks: {display: false},
   responsive: true,
   maintainAspectRatio: false,
   plugins: {

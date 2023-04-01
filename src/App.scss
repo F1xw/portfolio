@@ -1,29 +1,41 @@
 @import "/src/mediaQueries.scss";
 
 :root {
-  --col-primary: #35328C;
-  --col-lowAlpha: #ffffffBB;
-  --col-secondary: #F24968;
-  --col-text: #000;
-  --col-content-bg: #fff;
-  --col-bg: #222069;
-  --col-link: #7f7cd8;
-  --col-link-hover: #F24968;
-  --col-link-active: #1c5f5f;
+  --col-primary: #2751a7;
+    --col-lowAlpha: #ffffffBB;
+    --col-secondary: #D93636;
+    --col-text: #000;
+    --col-content-bg: #ffffff;
+    --col-bg: #223b6d;
+    --col-link: #2E6FF2;
+    --col-link-hover: #2E6FF2;
+    --col-link-active: #D98989;
 
   .color-scheme--light {
-    --col-primary: #35328C;
+    --col-primary: #2751a7;
     --col-lowAlpha: #ffffffBB;
-    --col-secondary: #F24968;
+    --col-secondary: #D93636;
     --col-text: #000;
-    --col-content-bg: #fff;
-    --col-bg: #222069;
-    --col-link: #35328C;
-    --col-link-hover: #F24968;
-    --col-link-active: #1c5f5f;
+    --col-content-bg: #ffffff;
+    --col-bg: #223b6d;
+    --col-link: #2E6FF2;
+    --col-link-hover: #2E6FF2;
+    --col-link-active: #D98989;
   }
 
   .color-scheme--dark {
+    --col-primary: #2751a7;
+    --col-lowAlpha: #292929BB;
+    --col-secondary: #da3d3d;
+    --col-text: #fff;
+    --col-content-bg: #292929;
+    --col-bg: #223b6d;
+    --col-link: #6192f3;
+    --col-link-hover: #2E6FF2;
+    --col-link-active: #D98989;
+  }
+
+  .color-scheme--dark--old {
     --col-primary: #3e3ba0;
     --col-lowAlpha: #292929BB;
     --col-secondary: #F24968;
@@ -68,7 +80,7 @@ html {
   /* Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #f24968 #ffffff;
+    scrollbar-color: var(--col-secondary) var(--col-content-bg);
   }
 
   /* Chrome, Edge, and Safari */
@@ -77,14 +89,14 @@ html {
   }
 
   *::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: var(--col-content-bg);
     background: transparent;
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #f24968;
+    background-color: var(--col-secondary);
     border-radius: 0;
-    border: 0px none #ffffff;
+    border: 0px none var(--col-content-bg);
   }
 
 .App {

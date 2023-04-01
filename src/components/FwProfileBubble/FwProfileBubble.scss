@@ -5,10 +5,12 @@
     animation: float 6s ease-in-out infinite alternate;
     display: flex;
     flex-direction: column;
-    background-image: url("../../assets/svg/bubbleProfile.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background: var(--col-content-bg);
+    -webkit-mask-image: url("../../assets/svg/bubbleProfile.svg");
+    mask-image: url("../../assets/svg/bubbleProfile.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
     width: 450px;
     height: 450px;
 

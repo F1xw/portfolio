@@ -3,6 +3,17 @@ import './FwBackgroundAnimation.css';
 
 class FwBackgroundAnimation extends React.Component {
 
+    componentDidMount() {
+        const background = document.getElementsByClassName("FwBackgroundAnimation")[0]
+        this.listener = document.addEventListener("scroll", () => {
+            background.setAttribute("style", `scale: ${1+window.scrollY/4500}`)
+        })
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("scroll", this.listener)
+    }
+
     render() {
         return (
             <div className="FwBackgroundAnimation">
@@ -13,7 +24,7 @@ class FwBackgroundAnimation extends React.Component {
                     <li className="corners-box-20" ></li>
                     <li></li>
                     <li className="corners-box-35" ></li>
-                    <li className="circle-box" ></li>
+                    <li className="circle-box"></li>
                     <li></li>   
                 </ul>
             </div>

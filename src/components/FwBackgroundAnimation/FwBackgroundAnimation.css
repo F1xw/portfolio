@@ -30,17 +30,17 @@
   }
   
   .bg-animation-box li.circle-box {
-    background-image: url("../../assets/png/rocket.png");
+    background-image: url("../../assets/background/rocket.png");
     background-size: contain;
   }
   
   .bg-animation-box li.corners-box-20 {
-    background-image: url("../../assets/png/star.png");
+    background-image: url("../../assets/background/star.png");
     background-size: contain;
   }
   
   .bg-animation-box li.corners-box-35 {
-    background-image: url("../../assets/png/star.png");
+    background-image: url("../../assets/background/star.png");
     background-size: cover;
   }
   

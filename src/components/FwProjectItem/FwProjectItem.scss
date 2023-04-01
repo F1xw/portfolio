@@ -69,9 +69,11 @@
 .FwProjectItem__text {
     pointer-events: none;
     text-align: justify;
+    width: 100%;
 
     h1 {
         color: var(--col-secondary);
+        text-align: left;
     }
 
     hr {
@@ -103,6 +105,7 @@
     pointer-events: all;
 
     a {
+        text-decoration: none !important;
         &::after {
             content: "•";
             color: white;

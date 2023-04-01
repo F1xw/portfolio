@@ -1,0 +1,25 @@
+@import "/src/mediaQueries.scss";
+
+.FwReferencesPage {
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.FwReferencesPage_projectContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    padding: 100px 25px 25px 25px;
+    justify-content: space-evenly;
+    
+    @include lt-md {
+        padding: 0;
+        padding-top: 25px;
+    }
+
+    @include lt-sm {
+        padding-top: 0;
+    }
+}

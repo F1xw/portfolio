@@ -1,6 +1,5 @@
 import React from 'react';
 import FwButton from '../FwButton/FwButton';
-import aboutMeBubble from '../../assets/svg/bubbleAboutMe.svg';
 import "./FwAboutMe.scss";
 
 class FwAboutMe extends React.Component {
@@ -12,7 +11,6 @@ class FwAboutMe extends React.Component {
     render() {
         return (
             <div className="FwAboutMe" name="about">
-                <img src={aboutMeBubble} alt="" />
                 <div className="FwAboutMe__text">
                     <h1>About Me</h1>
                     <p>

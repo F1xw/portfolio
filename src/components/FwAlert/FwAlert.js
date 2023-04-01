@@ -17,15 +17,10 @@ class FwAlert extends React.Component {
     closeSelf() {
         this.setState({
             isClosing: true,
-        })
-
+        });
         setTimeout(() => {
             var closingAlerts = document.getElementsByClassName("FwAlert--closing");
-
             closingAlerts[0].remove();
-
-            
-
         }, 1000);
     }
 

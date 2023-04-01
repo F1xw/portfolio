@@ -31,14 +31,10 @@ class FwProjectItem extends React.Component {
                     <div className="FwProjectItem__image">
                         {this.props.project.image ? <img src={this.props.project.image} alt="" /> : "" }
                     </div>
-                    <p>
-                        {this.props.children}
-                        <br />
-                        <br />
-                        <span className="FwProjectItem__links">
-                            {links}
-                        </span>
-                    </p>
+                    <p dangerouslySetInnerHTML={{__html: this.props.project.description}} />
+                    <span className="FwProjectItem__links">
+                        {links}
+                    </span>
                 </div>
             </div>
         );

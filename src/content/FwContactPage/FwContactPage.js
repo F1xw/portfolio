@@ -1,5 +1,5 @@
 import React from "react";
-import { FaChevronRight, FaGithub, FaEnvelope, FaTwitter, FaCoffee } from 'react-icons/fa';
+import { FaChevronRight, FaGithub, FaEnvelope, FaTwitter, FaHeart } from 'react-icons/fa';
 import './FwContactPage.scss';
 
 class FwContactPage extends React.Component {
@@ -47,9 +47,9 @@ class FwContactPage extends React.Component {
                         <div className="FwContactPage__faqListItemContent">
                             <div className="text">
                                 <p>
-                                    If you found a bug in any of my projects and would like to disclose it, please message me at <a href="mailto:bugs@flowei.tech">bugs@flowei.tech</a>.
-                                    Please add a description of what happened, as well as the steps to take for recreation. If possible, please add screenshots. Thank you very much for
-                                    wanting to disclose the bug properly. I will try to fix it as quickly as possible or answer if I have any questions.
+                                    If you found a bug in one of my projects and would like to disclose it, please message me at <a href="mailto:bugs@flowei.tech">bugs@flowei.tech</a>.
+                                    Please add a description of what happened, as well as the steps to take for reproduction. If possible, please add screenshots. Thank you very much! 
+                                    I will try to fix it as quickly as possible or answer if I have any questions.
                                 </p>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ class FwContactPage extends React.Component {
                         <li className="FwContactPage__linksListItem"><a href="https://github.com/F1xw" target="_blank" rel="noreferrer"><h4><FaGithub /> &nbsp; GitHub</h4></a></li>
                         <li className="FwContactPage__linksListItem"><a href="mailto:flo@flowei.tech" target="_blank" rel="noreferrer"><h4><FaEnvelope /> &nbsp; E-Mail</h4></a></li>
                         <li className="FwContactPage__linksListItem"><a href="https://twitter.com/flowei_" target="_blank" rel="noreferrer"><h4><FaTwitter /> &nbsp; Twitter</h4></a></li>
-                        <li className="FwContactPage__linksListItem"><a href="https://ko-fi.com/C0C47KC3D" target="_blank" rel="noreferrer"><h4><FaCoffee /> &nbsp; Donate</h4></a></li>
+                        <li className="FwContactPage__linksListItem"><a href="https://paypal.me/F1xw" target="_blank" rel="noreferrer"><h4><FaHeart /> &nbsp; Donate</h4></a></li>
                     </ul>
                 </div>
             </div>
