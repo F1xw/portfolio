@@ -41,12 +41,11 @@ class FwReferencesPage extends React.Component {
                   title: "Website",
                 },
               ],
+              description: `Built using React and Next.js, this website reflects the mix of tradition and luxory of 'Anello Steakhouse & Cocktailbar'.
+              With digitalization in mind, we've tried to streamline the online restaurant experience. The site will continue to adapt and evolve based on
+              user feedback.`
             }}
-          >
-            Built using React and Next.js, this website reflects the mix of tradition and luxory of the Anello Steakhouse & Cocktailbar.
-            With digitalization in mind, we've tried to streamline the online restaurant experience. The site will continue to adapt and evolve based on
-            user feedback.
-          </FwProjectItem>
+          />
         </div>
       </div>
     );
