@@ -6,7 +6,14 @@ class FwBackgroundAnimation extends React.Component {
     componentDidMount() {
         const background = document.getElementsByClassName("FwBackgroundAnimation")[0]
         this.listener = document.addEventListener("scroll", () => {
-            background.setAttribute("style", `scale: ${1+window.scrollY/4500}`)
+            const keyframes = {
+                scale: 1+window.scrollY/4500
+            }
+            background.animate(keyframes, {
+                duration: 200,
+                fill: "forwards",
+                easing: "ease"
+            })
         })
     }
 

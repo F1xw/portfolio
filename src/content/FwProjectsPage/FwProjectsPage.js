@@ -17,6 +17,16 @@ const projects = [
         description: `HIGHLY CONFIDENTIAL!!!<br />details about nearvents coming soon`
     },
     {
+      title: "Morphing Cursor",
+      links: [
+        {
+          href: "https://github.com/F1xw/morphing-cursor",
+          title: "GitHub",
+        },
+      ],
+      description: `Replaces the default cursor with a div element that morphs into interactable elements on hover. Can be customized with ease and help in making your website more unique.`
+  },
+    {
         title: "SamCam",
         image: samcamProject,
         links: [
