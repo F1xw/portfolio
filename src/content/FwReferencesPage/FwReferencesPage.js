@@ -46,6 +46,21 @@ class FwReferencesPage extends React.Component {
               user feedback.`
             }}
           />
+          <FwProjectItem
+            index={1}
+            activeIndex={this.state.activeIndex}
+            clickHook={this.handleClick}
+            project={{
+              title: "Taste of India",
+              links: [
+                {
+                  href: "https://the-tasteofindia.com",
+                  title: "Website",
+                },
+              ],
+              description: `Taste Of India is a restaurant in Wuppertal, Germany focusing on tamil cuisine. To reflect their culture I chose saturated colors to match the traditional spices used.`
+            }}
+          />
         </div>
       </div>
     );
