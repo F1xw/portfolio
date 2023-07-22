@@ -17,6 +17,17 @@ const projects = [
         description: `HIGHLY CONFIDENTIAL!!!<br />details about nearvents coming soon`
     },
     {
+        title: "Node HP Webscan",
+        links: [
+          {
+            href: "https://github.com/F1xw/node-hp-webscan",
+            title: "GitHub",
+          },
+        ],
+        description: `For some reason HP requires users to create an account just to scan documents using one of their printers. Fortunatly some HP printers support the Webscan protocol.<br />
+        This protocol uses regular HTTP request to start a scan and download the document. Node HP Webscan implements this protocol into Node JS. This package can be used to implement scanning into mobile applications or websites.`
+    },
+    {
       title: "Morphing Cursor",
       links: [
         {
@@ -26,6 +37,17 @@ const projects = [
       ],
       description: `Replaces the default cursor with a div element that morphs into interactable elements on hover. Can be customized with ease and help in making your website more unique.`
   },
+    {
+        title: "Home Assistant",
+        links: [
+          {
+            href: "https://github.com/F1xw/home-assistant-stuff",
+            title: "GitHub",
+          },
+        ],
+        description: `I am a huge fan of home automation and chose Home Assistant as my platform. Home Assistant supports custom automation blueprints and addons (if you run on bare metal).
+        This repository contains my blueprints and addons to use with your own Home Assistant installation.`
+    },
     {
         title: "SamCam",
         image: samcamProject,
