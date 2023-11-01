@@ -12,6 +12,7 @@ import FwLandingPage from './content/FwLandingPage/FwLandingPage';
 import FwProjectsPage from './content/FwProjectsPage/FwProjectsPage';
 import FwContactPage from './content/FwContactPage/FwContactPage';
 import FwReferencesPage from './content/FwReferencesPage/FwReferencesPage';
+import FwRandomLettersPrivacy from './content/FwRandomLettersPrivacy/FwRandomLettersPrivacy';
 
 import FwBackgroundAnimation from './components/FwBackgroundAnimation/FwBackgroundAnimation';
 import FwEasterEgg from './components/FwEasterEgg/FwEasterEgg';
@@ -28,7 +29,8 @@ class App extends React.Component {
       "projects",
       "references",
       "contact",
-      "easteregg"
+      "easteregg",
+      "apps/random-letters/privacy"
     ]
     this.handleTabClick = this.handleTabClick.bind(this)
     this.handleTabChange = this.handleTabChange.bind(this)
@@ -99,6 +101,9 @@ class App extends React.Component {
 
       case "easteregg":
         return <FwEasterEgg />
+
+      case "apps/random-letters/privacy":
+        return <FwRandomLettersPrivacy />
     
       default:
         return <FwLandingPage />
