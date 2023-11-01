@@ -38,7 +38,8 @@ class App extends React.Component {
   }
 
   handleTabChange() {
-    let setPath = window.location.pathname.replace("/", "");
+    let setPath = window.location.pathname.endsWith("/") ? window.location.pathname.substring(1,window.location.pathname.length-1) : window.location.pathname.substring(1,window.location.pathname.length);
+    console.log(setPath)
     if (setPath !== "/") {
       if (this.tabs.includes(setPath)) {
         this.setState({
